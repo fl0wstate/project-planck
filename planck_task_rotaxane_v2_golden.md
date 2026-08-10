@@ -1,0 +1,108 @@
+# Golden Solution — rotaxane chirality census v2 (answer 16)
+
+## Step-by-Step Solution
+
+**Step 1.** A [2]rotaxane is an assembly of exactly two molecular components — one macrocycle and one dumbbell — held together mechanically, with no covalent bond between them. The two components are constitutionally different molecules.
+
+**Step 2.** Because the two components are different molecules, any symmetry operation of the whole rotaxane must map the macrocycle onto the macrocycle and the dumbbell onto the dumbbell. No operation can interchange them.
+
+**Step 3.** The dumbbell defines a unique line in space: the axis running through its two end groups, along the $-\mathrm{O(CH_2)_6O}-$ core. The macrocycle encircles this line. Any symmetry operation of the rotaxane must therefore map this line onto itself.
+
+**Step 4.** Chirality is decided exclusively by improper symmetry operations: a molecule is achiral if and only if it possesses at least one improper operation (a reflection, an inversion, or a rotoreflection). Proper rotations are irrelevant to the question. It is therefore sufficient to enumerate the improper operations that preserve the axle axis.
+
+**Step 5.** The improper operations that map a given line onto itself are exactly three kinds: (a) reflection in a plane that *contains* the line, denoted $\sigma_v$; (b) reflection in the plane *perpendicular* to the line, which for a rotaxane is the macrocycle's own mean plane, denoted $\sigma_h$; (c) rotoreflections $S_n$ about the line. Inversion is included in (c), since $i = S_2$.
+
+**Step 6.** Every rotoreflection factorises as $S_n = C_n \cdot \sigma_h$, where $C_n$ is a proper rotation about the axis. Consequently every operation of kind (c) contains the factor $\sigma_h$.
+
+**Step 7.** Partition the improper operations by their action on the assembly. A $\sigma_v$ leaves each half of the dumbbell on its own side of the macrocycle and leaves each face of the macrocycle on its own side of the ring plane. By contrast $\sigma_h$, and hence every $S_n$, *exchanges* the two halves of the dumbbell and *exchanges* the two faces of the macrocycle. Call these **class V** and **class H** respectively.
+
+**Step 8.** For a class V operation to be a symmetry of the rotaxane, both components must individually admit it: the macrocycle must possess a mirror plane containing the axle axis, and the dumbbell must possess a mirror plane containing its own axis.
+
+**Step 9.** No further condition arises from the relative orientation of the two components. The macrocycle pirouettes freely about the axle, so the azimuth of the macrocycle's mirror plane relative to the dumbbell's mirror plane is a freely adjustable co-conformational variable, and the two planes can always be brought into coincidence. Since a rotaxane counts as achiral if *any* accessible co-conformation is superimposable on its mirror image, this alignment is always available.
+
+**Step 10.** For a class H operation to be a symmetry, the macrocycle must map onto itself under $\sigma_h$ or under some $S_n$, and the dumbbell must have its two ends exchangeable by an improper operation. The $C_n$ factor inside $S_n$ is a rotation about the axle axis and is absorbed by the same free pirouetting invoked in Step 9, so it imposes no additional requirement on the dumbbell.
+
+**Step 11.** Combining Steps 8 and 10 gives the governing criterion:
+
+> a rotaxane is **achiral** if and only if
+> [macrocycle has a $\sigma_v$ **and** dumbbell has a mirror plane containing its axis]
+> **or** [macrocycle has $\sigma_h$ or some $S_n$ **and** the dumbbell's two ends are exchangeable by an improper operation].
+
+**Step 12.** Each macrocycle therefore needs two independent yes/no judgments, written $(v, h)$, and each dumbbell needs two, written $(v, \mathrm{imp})$. These are properties of the isolated components, and all of them are constitutional or configurational, so none of them can be altered by conformational change.
+
+**Step 13.** $M1$, $\sigma_v$: every residue is a 3-aminobenzoyl unit, so going once round the ring each amide reads $\mathrm{C(O)} \rightarrow \mathrm{NH}$ in the same rotational sense; the ring is *orientated*. A mirror plane containing the ring axis is an orientation-reversing map of the ring plane, so it converts that rotational sense into its opposite. This changes head-to-tail into tail-to-head, which is a different constitution. Hence $M1$ has **no** $\sigma_v$, and no conformational change can restore one.
+
+**Step 14.** $M1$, $\sigma_h$: with planar trans-amides and 1,3-disubstituted benzene residues the ring is planar, so every atom lies in the mean plane. Reflection in that plane leaves every atom fixed and is therefore a symmetry. $M1$ **has** $\sigma_h$.
+
+**Step 15.** $M1$ verdict: $(v = \text{no}, h = \text{yes})$. Note that $M1$ is itself achiral, yet it is orientated — these are different properties and must not be conflated.
+
+**Step 16.** $M2$, candidate mirror planes: a hexagonal ring admits two families of vertical mirror planes — three passing through pairs of diametrically opposite residues ("vertex planes"), and three passing through the midpoints of opposite bonds between residues ("edge planes").
+
+**Step 17.** $M2$, edge planes: the residues alternate isophthaloyl ($A$) and benzene-1,3-diamine ($B$) around the ring, giving the pattern $ABABAB$. An edge plane maps each residue onto its neighbour, i.e. maps $A$ onto $B$. Since $A$ and $B$ are constitutionally different residues, no edge plane is a symmetry of $M2$.
+
+**Step 18.** $M2$, vertex planes: label the residues $1$ to $6$ so that odd-numbered residues are $A$ and even-numbered are $B$. The vertex plane through residues $1$ and $4$ fixes those two and interchanges $2 \leftrightarrow 6$ and $3 \leftrightarrow 5$. Residues $2$ and $6$ are both $B$; residues $3$ and $5$ are both $A$; residues $1$ and $4$ are each mapped to themselves. Every residue therefore lands on a residue of its own type. The head-to-head and tail-to-tail amide arrangement is likewise preserved, because reversing the rotational sense maps a head-to-head junction onto a head-to-head junction. Hence $M2$ **has** $\sigma_v$ — three of them.
+
+**Step 19.** $M2$, $\sigma_h$: the ring is planar for the same reason as in Step 14, so $M2$ **has** $\sigma_h$.
+
+**Step 20.** $M2$ verdict: $(v = \text{yes}, h = \text{yes})$.
+
+**Step 21.** $M3$, $M4$, $M5$ share a common consequence of the strap. Each carries one strap arching over a single face, and the strap cannot reach the other face. Any class H operation exchanges the two faces of the ring, so it would carry the strap to the face it cannot occupy. Therefore $\sigma_h$, every $S_n$, and $i$ are all destroyed: $h = \text{no}$ for $M3$, $M4$ and $M5$ alike.
+
+**Step 22.** $M3$, $M4$, $M5$, criterion for a surviving $\sigma_v$. The strap is anchored at the 5-positions of two residues, and free rotation about its single bonds lets its crossing path over the face take up any accessible geometry. So for a given candidate mirror plane, the strap can be placed symmetrically with respect to that plane provided the plane maps the *pair of anchor residues* onto itself — either fixing both anchors, or interchanging them. The candidate planes are the three vertex planes of Step 18; the edge planes are unavailable by Step 17.
+
+**Step 23.** $M3$: the anchors are diametrically opposite, say residues $1$ and $4$. The vertex plane through residues $1$ and $4$ fixes both anchors, and the strap can adopt the conformation lying within that plane, crossing over the centre of the ring. This plane is therefore a symmetry. $M3$ verdict: $(v = \text{yes}, h = \text{no})$.
+
+**Step 24.** $M4$: the anchors are in a 1,3-relationship, say residues $1$ and $3$. No vertex plane fixes both. However, the vertex plane through residues $2$ and $5$ interchanges $1 \leftrightarrow 3$, so it maps the anchor pair onto itself, and the strap can adopt the conformation symmetric about that plane, with its crossing point lying over the radius through residue $2$. This plane is therefore a symmetry. A mirror plane does not need to *fix* the anchors; interchanging them serves equally well. $M4$ verdict: $(v = \text{yes}, h = \text{no})$.
+
+**Step 25.** $M5$: the anchors are adjacent, say residues $1$ and $2$. A plane mapping $\{1,2\}$ onto itself must either fix both, which no vertical plane of a hexagon does for two adjacent vertices, or interchange them, which requires the edge plane through the midpoint of the bond between residues $1$ and $2$ — and Step 17 showed no edge plane is a symmetry of the $ABABAB$ ring. Checking the three vertex planes explicitly: the plane through $(1,4)$ sends $\{1,2\}$ to $\{1,6\}$; the plane through $(2,5)$ sends $\{1,2\}$ to $\{3,2\}$; the plane through $(3,6)$ sends $\{1,2\}$ to $\{5,4\}$. None maps the anchor pair onto itself.
+
+**Step 26.** $M5$ verdict: $(v = \text{no}, h = \text{no})$. Having no improper operation at all, **$M5$ is an intrinsically chiral macrocycle**, and every rotaxane containing it is chiral. This follows from the same base ring and the same strap as $M3$ and $M4$; only the strap's position differs.
+
+**Step 27.** $M6$, $\sigma_v$: $M6$ is built from eight 3-aminobenzoyl residues, so like $M1$ it is orientated. By the argument of Step 13, $M6$ has **no** $\sigma_v$.
+
+**Step 28.** $M6$, $\sigma_h$: number the residues $0$ to $7$; the aryl rings are locked alternately above and below the mean plane, so residue $k$ points up for even $k$ and down for odd $k$. Reflection in the mean plane leaves each residue at its own position but reverses its tilt, so an up residue would have to occupy a position that requires up while pointing down. $M6$ has **no** $\sigma_h$.
+
+**Step 29.** $M6$, inversion: $i = C_2 \cdot \sigma_h$, where $C_2$ maps residue $k$ to position $k+4$. Since $k$ and $k+4$ have the same parity, they carry the same tilt sense; the subsequent reflection reverses it, so again the residue arrives with the wrong tilt. $M6$ has **no** inversion centre.
+
+**Step 30.** $M6$, rotoreflection — the decisive step. Consider $S_8 = C_8 \cdot \sigma_h$. The rotation $C_8$ maps residue $k$ to position $k+1$; being a proper rotation it preserves the head-to-tail amide sense, so it is compatible with the ring's orientation. It carries the tilt along unchanged, so a residue that was up arrives up. The subsequent reflection $\sigma_h$ reverses that tilt to down. Position $k+1$ has parity opposite to $k$, so it requires exactly the tilt just produced: up for even $k$ becomes down at odd position $k+1$, as required. Every residue matches, so **$S_8$ is a symmetry of $M6$**.
+
+**Step 31.** $M6$ verdict: $(v = \text{no}, h = \text{yes})$. $M6$ is achiral, and it belongs to class H, even though it possesses neither a mirror plane nor an inversion centre — its only improper operation is the rotoreflection $S_8$. Its predicate is therefore identical to that of $M1$.
+
+**Step 32.** Turning to the dumbbells, two general facts are needed. First, a tetrahedral stereocentre or a chiral axis can never lie in a mirror plane of the molecule, because reflection would convert it into its own mirror image at the same site. Second, any reflection converts a centre of configuration $(R)$ into $(S)$, and an axis of configuration $(R_a)$ into $(S_a)$.
+
+**Step 33.** $A1$ carries $-\mathrm{CH_2Ar}$ at both ends, with no stereo elements. A plane containing the axle axis and both end groups is available in a suitable conformation, so $A1$ has a mirror plane containing its axis. The plane perpendicular to the axis at the midpoint of the core interchanges the two constitutionally identical ends, so the ends are improperly exchangeable. $A1$: $(v = \text{yes}, \mathrm{imp} = \text{yes})$.
+
+**Step 34.** $A2$ carries $-\mathrm{CH_2Ar}$ at one end and $-\mathrm{CH_2Ad}$ at the other, with no stereo elements. A plane containing the axis is still available, so $v = \text{yes}$. But the two ends are constitutionally different, so no operation of any kind can interchange them. $A2$: $(v = \text{yes}, \mathrm{imp} = \text{no})$.
+
+**Step 35.** $A3$ carries $-\mathrm{CH(CH_3)Ar}$ at both ends, one $(R)$ and one $(S)$. By Step 32 no mirror plane can contain the axis, since such a plane would map each stereocentre onto itself while inverting it. The perpendicular midpoint plane, however, interchanges the two ends *and* inverts both descriptors; it sends the $(R)$ end to the position of the $(S)$ end as an $(S)$ end, which is what is required. $A3$ is a meso dumbbell: $(v = \text{no}, \mathrm{imp} = \text{yes})$.
+
+**Step 36.** $A4$ carries $-\mathrm{CH(CH_3)Ar}$ at both ends, both $(R)$. Again no mirror plane can contain the axis. The perpendicular midpoint plane would deliver an $(S)$ end to a site that requires $(R)$, so it is not a symmetry, and no other improper operation exchanges the ends. The two ends are related only by a *proper* $C_2$ rotation. $A4$ has no improper operation at all and is an intrinsically chiral dumbbell: $(v = \text{no}, \mathrm{imp} = \text{no})$.
+
+**Step 37.** $A5$ carries $-\mathrm{CH_2Bin}$ at both ends, one $(R_a)$ and one $(S_a)$. The chirality is axial rather than central, but Step 32 applies verbatim, and the reasoning of Step 35 carries over unchanged. $A5$: $(v = \text{no}, \mathrm{imp} = \text{yes})$.
+
+**Step 38.** Collecting the eleven component judgments:
+
+| macrocycle | $(v, h)$ | | dumbbell | $(v, \mathrm{imp})$ |
+|---|---|---|---|---|
+| $M1$ | (no, yes) | | $A1$ | (yes, yes) |
+| $M2$ | (yes, yes) | | $A2$ | (yes, no) |
+| $M3$ | (yes, no) | | $A3$ | (no, yes) |
+| $M4$ | (yes, no) | | $A4$ | (no, no) |
+| $M5$ | (no, no) | | $A5$ | (no, yes) |
+| $M6$ | (no, yes) | | | |
+
+**Step 39.** Column $A1$, which is $(v = \text{yes}, \mathrm{imp} = \text{yes})$: both routes to achirality are open, so the rotaxane is achiral whenever the macrocycle has $\sigma_v$ *or* is class H. $M1$ qualifies through $h$; $M2$ through either; $M3$ and $M4$ through $v$; $M6$ through $h$ (via $S_8$). Only $M5$, which has neither, gives a chiral rotaxane. **1 chiral.**
+
+**Step 40.** Column $A2$, which is $(v = \text{yes}, \mathrm{imp} = \text{no})$: the ends cannot be exchanged, so class H is unavailable and only $\sigma_v$ can rescue achirality. $M2$, $M3$ and $M4$ have $\sigma_v$ and give achiral rotaxanes; $M1$, $M5$ and $M6$ lack it and give chiral ones. **3 chiral.**
+
+**Step 41.** Column $A3$, which is $(v = \text{no}, \mathrm{imp} = \text{yes})$: the dumbbell has no mirror plane containing its axis, so class V is unavailable and only a class H operation on the macrocycle can rescue achirality. $M1$, $M2$ and $M6$ are class H and give achiral rotaxanes — for $M6$ this holds by virtue of $S_8$ alone. $M3$, $M4$ and $M5$ are not class H and give chiral ones. **3 chiral.**
+
+**Step 42.** Column $A4$, which is $(v = \text{no}, \mathrm{imp} = \text{no})$: neither route is available for any macrocycle, and indeed $A4$ is itself chiral. All six rotaxanes in this column are chiral. **6 chiral.**
+
+**Step 43.** Column $A5$, which is $(v = \text{no}, \mathrm{imp} = \text{yes})$: the predicate is identical to that of $A3$, so the analysis of Step 41 applies unchanged. $M3$, $M4$ and $M5$ give chiral rotaxanes. **3 chiral.**
+
+**Step 44.** Summing over the five columns: $1 + 3 + 3 + 6 + 3 = 16$.
+
+**Step 45.** Cross-check by rows, using the same criterion applied macrocycle by macrocycle. $M1$ is chiral with $A2$ and $A4$ (2). $M2$ is chiral with $A4$ only (1). $M3$ is chiral with $A3$, $A4$ and $A5$ (3). $M4$ is chiral with $A3$, $A4$ and $A5$ (3). $M5$ is chiral with all five (5). $M6$ is chiral with $A2$ and $A4$ (2). The row total is $2 + 1 + 3 + 3 + 5 + 2 = 16$, in agreement with Step 44.
+
+**Final Answer:** 16

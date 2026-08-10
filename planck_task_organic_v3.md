@@ -1,0 +1,68 @@
+# Planck Task — Organic v3 (diastereomer-gated acetoxonium scrambling)
+
+**Domain:** Chemistry · **Subdomain:** Organic
+**Answer type:** numeric (percent, 1 decimal)
+**Status:** cold-solved correctly by Opus 4.8 proxy (3/3 iterations of this family solved). Submit only if platform responder models are weaker, or harden further first.
+
+---
+
+## PROMPT
+
+A mixture of two enantiopure diastereomers of 2-(acetyloxy)cyclohexyl 4-bromobenzenesulfonate is solvolyzed in anhydrous acetic acid at 75 °C: 70.0 mol % is the trans diastereomer, $(1S,2S)$, and 30.0 mol % is the cis diastereomer, $(1R,2S)$. In both compounds the carbonyl oxygen of the acetate group is 100% $^{18}\text{O}$; every other oxygen in the system, including all solvent oxygens, is $^{16}\text{O}$.
+
+Assume the following:
+- Any substrate molecule for which intramolecular acetoxy participation is geometrically accessible reacts exclusively through the cyclic acetoxonium (1,3-dioxolan-2-ylium) pathway; solvent capture of the acetoxonium ion occurs exclusively at the ring carbons C1 and C2.
+- Any substrate molecule for which such participation is not geometrically accessible reacts exclusively by direct one-step backside displacement of brosylate at C1 by acetic acid.
+- Both diastereomers react to completion. The only product is 1,2-diacetoxycyclohexane; there is no elimination, no isotope exchange with solvent, and no internal return.
+
+In an ester group $\text{C–O–C(=O)CH}_3$, the single-bonded oxygen is the "ether oxygen" and the double-bonded oxygen is the "carbonyl oxygen".
+
+What percentage of all product molecules are the $(1R,2R)$ stereoisomer carrying $^{18}\text{O}$ in an ether-oxygen position? Give the answer in percent, rounded to 1 decimal place.
+
+## FINAL ANSWER
+
+$$35.0$$
+
+## GOLDEN RESPONSE
+
+**Step 1 — Conformational gate for participation.** Acetoxy participation requires the acetate oxygen anti-periplanar to the C1–OBs bond, i.e. a trans-diaxial arrangement. On a cyclohexane ring, trans-1,2 substituents can be diaxial (ax,ax chair); cis-1,2 substituents are always ax,eq and can never be diaxial. Therefore the trans-$(1S,2S)$ substrate (70.0%) reacts via the acetoxonium pathway; the cis-$(1R,2S)$ substrate (30.0%) reacts only by direct displacement.
+
+**Step 2 — Acetoxonium formation (trans feed).** The carbonyl oxygen ($^{18}$O) attacks C1 backside, expelling brosylate with inversion at C1. In the resulting 1,3-dioxolan-2-ylium ion, the ring oxygen bonded to C1 is $^{18}$O; the ring oxygen bonded to C2 is $^{16}$O (former ester ether oxygen).
+
+**Step 3 — Ion symmetry.** Ignoring isotopes, the fused acetoxonium ion has a symmetry axis exchanging C1 and C2, so acetic acid captures at C1 and C2 with equal probability (isotopic substitution does not perturb the rates within the stated assumptions).
+
+**Step 4 — Capture at C1 (35.0% of total).** Backside attack at C1 breaks C1–$^{18}$O with a second inversion at C1 → net retention at both centers → $(1S,2S)$ product. The released $^{18}$O becomes the carbonyl oxygen of the acetate on C2. Label = carbonyl position. Not the target species.
+
+**Step 5 — Capture at C2 (35.0% of total).** Backside attack at C2 breaks C2–$^{16}$O with inversion at C2; C1 retains its single inversion from Step 2 → $(1R,2R)$ product. The acetate on C1 keeps C1–$^{18}$O intact as its ether oxygen; the released $^{16}$O becomes its carbonyl. Label = ether position. **Target species.**
+
+**Step 6 — Direct pathway (cis feed, 30.0% of total).** Single inversion at C1 ($1R \to 1S$) → $(1S,2S)$ trans-diacetate; the C2 acetate untouched, $^{18}$O stays carbonyl. Contributes nothing to the target.
+
+**Step 7 — CIP consistency.** At C1 and C2 the top-priority substituent is always the O-linked group (OBs or OAc), followed by the O-bearing ring carbon, the CH₂ ring carbon, then H — identical priority pattern before and after substitution, so spatial inversion ⇔ descriptor flip throughout.
+
+**Step 8 — Tally.** Target = trans feed × capture-at-C2 fraction = $0.700 \times 0.500 = 0.350$.
+
+**Final Answer:** $35.0$
+
+## Distinct wrong branches (≥6, not guessable)
+
+| Error | Answer (%) |
+|---|---|
+| Applies NGP scrambling to both diastereomers | 50.0 |
+| Treats stereochemistry and label as independent | 17.5 |
+| Ignores the diastereomer split entirely | 25.0 or 50.0 |
+| Inverts the gate (cis participates, trans not) | 15.0 |
+| Believes NGP gives net retention only (no racemization) | 0.0 |
+| Counts direct-pathway product as (1R,2R) | 65.0 |
+
+## References (all pre-cutoff)
+
+1. Winstein, S.; Buckles, R. E. *J. Am. Chem. Soc.* **1942**, 64, 2780–2786. doi:10.1021/ja01260a064 — neighboring acetoxy participation, trans vs cis. *Required: True.*
+2. Clayden, Greeves, Warren, *Organic Chemistry*, 2nd ed., OUP — participation/rearrangement chapter. https://global.oup.com/ukhe/product/organic-chemistry-9780199270293 *Required: False.*
+3. Bloembergen-free — no physics refs needed for this variant.
+
+## Iteration history / lessons
+
+- v1 (LTO conductivity, all formulas given): 2/2 platform models solved. Formula given = reasoning given.
+- v2 (acetoxonium, scaffolded + unscaffolded): Opus proxy solved both. Canonical Winstein pattern-matched cold.
+- v3 (diastereomer gate): Opus proxy solved. Gate is standard conformational analysis.
+- Rounding hazard found in v1: golden 2.401 vs model 2.400 — answer sat on a rounding boundary. Always pick data with fat margin at required precision.
