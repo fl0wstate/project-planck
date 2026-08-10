@@ -42,6 +42,7 @@ The single observed failure was an over-eager **local causal chain** overrunning
 | Colligative Mₙ vs M𝓌 fork | solved at **both** tiers; hardening made it *faster* (25 s, "Key trap first:") |
 | Silent boiling-point pin (false-confirming chain) | solved via extreme-case bounding |
 | Optional-fork speciation (protonated adduct) | solved, but **34 min** — hardest artifact produced |
+| Coordination isomer census (Werner compositions, 2026-08-10) | solved 0/2 — **exemplar-saturated host**: every composition class (MA₂B₂, Mabcd, M(AA)abcd, M(AA)₂ab, terpy) has its count in textbook tables; solvers classify-and-read-out. A15 applies **per-case**: heterogeneous deciding questions insufficient if any instance is retrievable. |
 
 ### Two structural traps in planck's own rules
 1. **Unambiguity forces consequence-free forks.** If every reading must give the same answer, no reading can be an error. Wrong branches must be **errors** (violate a stated constraint), never **interpretations**.

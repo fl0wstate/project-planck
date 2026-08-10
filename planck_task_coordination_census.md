@@ -1,4 +1,19 @@
-# planck task — mixed-geometry coordination isomer census
+# planck task — mixed-geometry coordination isomer census — ***RETIRED: 0/2***
+
+> **PLATFORM RESULT 2026-08-10: 0/2. Both responses returned 22, all six per-case counts correct.**
+>
+> Neither designed lever opened. H3's chirality layer was never skipped because the composition
+> class carries its answer: both responses treated it as the known type *M(AA)abcd* → "6 geometrical
+> arrangements, each chiral" → 12, a stock inorganic-exam result retrieved whole. H6's rigidity
+> constraint was never tested: "terpyridine binds meridionally" was stated as canonical fact, not
+> read off the SMILES. H5 was named "the standard/classic M(AA)₂ab case" by both.
+>
+> **Law sharpened (per-case A15):** heterogeneous deciding questions are NOT sufficient — each
+> *instance* must also be unretrievable. Coordination isomer counting is an exemplar-saturated
+> domain: every Werner composition class (MA₂B₂, Mabcd, M(AA)abcd, M(AA)₂ab, terpy) sits in
+> textbook tables with its count attached. The solver never reasons per case; it classifies each
+> complex into a named class and reads out the number. Contrast the organic kills, whose invented
+> scaffolds match no exemplar. **Retire the coordination-composition host entirely.**
 
 **FINAL ANSWER: 22**
 
