@@ -7,7 +7,7 @@ Existing Planck content mapped into `summit-task-package-v1`. These are **incomp
 - `requirements.txt`: the supplied Summit instructions, preserved verbatim.
 - `drafts/manifest.json`: every migrated question, its source revision, and review status.
 - `drafts/<id>/task.json`: Summit fields populated from existing source material.
-- `drafts/<id>/review.json`: source paths and hashes, legacy wrong-answer material, and author actions.
+- `drafts/<id>/review.json`: full question text in `question_source` and full solution text in `solution_source`, matching `task.json`; source paths and hashes remain in `sources`, alongside legacy wrong-answer material and author actions.
 - `drafts/draft-zips/<id>.zip`: optional form-import packages containing `task.json` at the ZIP root. Each ZIP is one question; do not upload the whole drafts directory.
 - `convert.py`: repeatable, standard-library-only migration and structural checks.
 

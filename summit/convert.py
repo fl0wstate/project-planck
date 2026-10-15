@@ -93,7 +93,6 @@ def build(destination):
         prompt = re.sub(r"\n\*\(~[\d,]+ chars\)\*\s*$", "", prompt)
         solution = trim_section(first_section(original, "golden"))
         inputs = [source]
-        solution_source = source.name
         if slug in GOLDENS:
             golden = ROOT / GOLDENS[slug]
             golden_text = golden.read_text()
@@ -101,7 +100,6 @@ def build(destination):
                         re.split(r"^## ", golden_text, maxsplit=1,
                                  flags=re.MULTILINE)[0].split("\n", 1)[1].strip())
             inputs.append(golden)
-            solution_source = golden.name
         references = trim_section(first_section(original, "references"))
         if not references:
             references = "\n".join(line for line in original.splitlines()
@@ -140,8 +138,8 @@ def build(destination):
             "source_commit": revision,
             "sources": [{"path": str(path.relative_to(ROOT)), "sha256": digest(path)}
                         for path in inputs],
-            "question_source": source.name + " / first PROMPT section",
-            "solution_source": solution_source,
+            "question_source": prompt,
+            "solution_source": solution,
             "answer_source": "Explicit existing answer key; no answer verification performed.",
             "source_title": original.splitlines()[0],
             "legacy_wrong_branches": trim_section(first_section(original, "wrong branches")
@@ -206,6 +204,10 @@ def check(destination):
         if errors:
             raise ValueError(f"{record['id']}: {errors}")
         review = json.loads((destination / record["review"]).read_text())
+        for review_field, task_field in (("question_source", "questionText"),
+                                        ("solution_source", "solution")):
+            if review.get(review_field) != package["task"][task_field]:
+                raise ValueError(f"{record['id']}: {review_field} does not match {task_field}")
         for source in review["sources"]:
             if digest(ROOT / source["path"]) != source["sha256"]:
                 raise ValueError(f"Source changed: {source['path']}")
