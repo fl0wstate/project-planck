@@ -7,7 +7,7 @@ Existing Planck content mapped into `summit-task-package-v1`. These are **incomp
 - `requirements.txt`: the supplied Summit instructions, preserved verbatim.
 - `drafts/manifest.json`: every migrated question, its source revision, and review status.
 - `drafts/<id>/task.json`: Summit fields populated from existing source material.
-- `drafts/<id>/review.json`: full question text in `question_source` and full solution text in `solution_source`, matching `task.json`; source paths and hashes remain in `sources`, alongside legacy wrong-answer material and author actions.
+- `drafts/<id>/review.json`: full question text in `question_source` and full solution text in `solution_source`, each stored as an array with one original text line per entry. Empty strings preserve blank lines. Joining each array with `\n` reproduces the corresponding `task.json` text exactly. Source paths and hashes remain in `sources`, alongside legacy wrong-answer material and author actions.
 - `drafts/draft-zips/<id>.zip`: optional form-import packages containing `task.json` at the ZIP root. Each ZIP is one question; do not upload the whole drafts directory.
 - `convert.py`: repeatable, standard-library-only migration and structural checks.
 
@@ -41,4 +41,4 @@ python3 summit/convert.py build --output /tmp/planck-summit-new
 python3 summit/convert.py check --output /tmp/planck-summit-new
 ```
 
-Build refuses a nonempty destination. Edit the existing `task.json` files directly to complete drafts; rebuilding is intended for fresh output only. Package generation does not claim readiness and never submits anything.
+Build refuses a nonempty destination. Edit the existing `task.json` files directly to complete drafts and synchronize the corresponding review line arrays when question or solution text changes; rebuilding is intended for fresh output only. The checker rejects non-array review fields and any text mismatch. JSON still requires escaped LaTeX backslashes within each line; these decode to the original characters. Package generation does not claim readiness and never submits anything.

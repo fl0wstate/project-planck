@@ -138,8 +138,8 @@ def build(destination):
             "source_commit": revision,
             "sources": [{"path": str(path.relative_to(ROOT)), "sha256": digest(path)}
                         for path in inputs],
-            "question_source": prompt,
-            "solution_source": solution,
+            "question_source": prompt.split("\n"),
+            "solution_source": solution.split("\n"),
             "answer_source": "Explicit existing answer key; no answer verification performed.",
             "source_title": original.splitlines()[0],
             "legacy_wrong_branches": trim_section(first_section(original, "wrong branches")
@@ -206,7 +206,12 @@ def check(destination):
         review = json.loads((destination / record["review"]).read_text())
         for review_field, task_field in (("question_source", "questionText"),
                                         ("solution_source", "solution")):
-            if review.get(review_field) != package["task"][task_field]:
+            lines = review.get(review_field)
+            if not isinstance(lines, list) or not all(
+                isinstance(line, str) and "\n" not in line for line in lines
+            ):
+                raise ValueError(f"{record['id']}: {review_field} must be an array of text lines")
+            if "\n".join(lines) != package["task"][task_field]:
                 raise ValueError(f"{record['id']}: {review_field} does not match {task_field}")
         for source in review["sources"]:
             if digest(ROOT / source["path"]) != source["sha256"]:
