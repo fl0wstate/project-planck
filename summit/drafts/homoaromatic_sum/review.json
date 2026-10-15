@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_homoaromatic_sum.md",
+      "sha256": "8cce11ce179cb63d70216a77e2af3e6e83b6291d01816545ed20e43974096b36"
+    }
+  ],
+  "question_source": "planck_task_homoaromatic_sum.md / first PROMPT section",
+  "solution_source": "planck_task_homoaromatic_sum.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# planck task — inventory-gap (planck_task_homoaromatic_sum.md)",
+  "legacy_wrong_branches": "- 24 - PRIMARY predicted failure: homoaromaticity omitted from the criteria inventory, so C is dismissed ('a saturated CH2 breaks the conjugated cycle, and the ring is explicitly non-planar - no ring current'); A + B only = 10 + 14.\n- 34 - C omitted as above AND the exocyclic carbonyl pi pair of F counted into the ring circuit (10 pi read as 4n+2, 'aromatic like tropone'): 10 + 14 + 10.\n- 40 - C handled correctly but F wrongly credited as a 10 pi aromatic (exocyclic C=O included in the count): 6 + 10 + 14 + 10.\n- 46 - C correct but D's 16 pi mis-assigned as 4n+2 (n mis-solved: 16 = 4(3)+2 arithmetic slip, or 'large annulenes are aromatic'): 6 + 10 + 14 + 16.\n- 16 - C correct but B's dianion charge dropped, so B is counted as a 12 pi 4n paratropic system and contributes 0: 6 + 10.\n- 10 - C omitted AND B counted as 12 pi (4n, dropped): A alone.\n- 62 - every fully conjugated or partly conjugated perimeter credited without applying any 4n vs 4n+2 test to the larger rings: 10 + 14 + 16 (D) + 16 (E) + 6 (C).\n- 3 - the aggregate misread as a headcount of diatropic species instead of the sum of circuit pi-electron counts.\n- 20 - C omitted and B mis-assigned as aromatic-but-12-pi while A kept, or A and B swapped counts (10 + 10).",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

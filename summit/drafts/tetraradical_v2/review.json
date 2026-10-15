@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_tetraradical_v2.md",
+      "sha256": "dfe9ed68a5bc1ad373b9d5816e0c4926f13fc5d041dce7b3cbdd9ec358640222"
+    }
+  ],
+  "question_source": "planck_task_tetraradical_v2.md / first PROMPT section",
+  "solution_source": "planck_task_tetraradical_v2.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# Planck Task — Tetraradical Quintet Gap v2 (red herring + threshold rejection)",
+  "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| 3.91 | uses adiabatic +5.60 for the arm coupling |\n| 4.11 | includes J₁₄ = +0.30 despite the threshold rule |\n| 4.17 | both of the above |\n| 3.74 | factor-2 projection applied to both pairs |\n| 1.87 | factor-1 both / no projection |\n| 1.84 | projection regimes swapped |\n| 3.60 | rigid-S=1 arms, or J₁₄ sign error |\n| 14.40 | rigid triplets with bare J_b |\n| 0.73 | reports gap to lowest triplet instead of quintet |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

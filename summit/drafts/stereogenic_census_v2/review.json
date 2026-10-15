@@ -1,0 +1,31 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_stereogenic_census_v2.md",
+      "sha256": "dd91fb080de1c8688d3b18fed74a14d4ce3a1651cf1c46f9a8378050092b5731"
+    },
+    {
+      "path": "planck_task_stereogenic_census_v2_golden.md",
+      "sha256": "c36efabdf995f658ac56dce7c6a876bda3941228facb88e78e179dc385b1c77d"
+    },
+    {
+      "path": "planck_task_stereogenic_census_v2_sources.md",
+      "sha256": "e30936eaed6f65ebefe38a1117c741262a22a8bfc6c5e07a0012a146cb63b54d"
+    }
+  ],
+  "question_source": "planck_task_stereogenic_census_v2.md / first PROMPT section",
+  "solution_source": "planck_task_stereogenic_census_v2_golden.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# planck task — stereogenic-element census v2 (HARDENED) — ***2/2 PLATFORM KILL***",
+  "legacy_wrong_branches": "| value | route |\n|---|---|\n| **20** | **the observed v1 failure mode**: every hindered axis counted as stereogenic, no symmetry test applied anywhere. D1, D4 and D6 all over-counted |\n| **22** | barrier heuristic and meso forms both missed |\n| **19** | aryl end tested but the other end never tested (D4 missed), and meso missed |\n| **18** | meso forms missed (D5 and D7 taken as $2^n$) |\n| **18** | the other end tested but the aryl end never tested |\n| **17** | aryl end tested, other end never tested: D4 counted as 2 |\n| **12** | C-N axes omitted and meso missed |\n| **11** | C-N axes omitted entirely - stereocentres and biaryl axes only |\n| **11** | no axial stereogenicity recognised at all |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

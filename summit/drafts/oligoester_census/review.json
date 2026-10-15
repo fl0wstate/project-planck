@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_oligoester_census.md",
+      "sha256": "cede323b3a8491d795dde204f599792cc29c865d4db58b00983a9b81c478c75b"
+    }
+  ],
+  "question_source": "planck_task_oligoester_census.md / first PROMPT section",
+  "solution_source": "planck_task_oligoester_census.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# planck task - cyclic oligoester chirality census (answer 3)",
+  "legacy_wrong_branches": "| value | route |\n|---|---|\n| **6** | **primary**: the closed checklist, testing only the mirror plane and the inversion centre; E1, E6 and E8 wrongly called chiral |\n| **8** | only a mirror plane sought; since $\\sigma_h$ alone can never work here, every compound is called chiral |\n| **5** | \"alternating implies achiral, otherwise chiral\" |\n| **5** | odd ring size assumed achiral, even ring size decided by the checklist |\n| **4** | any rotationally repeating pattern assumed achiral |\n| **2** | \"equal numbers of R and S implies achiral\" (E5 wrongly called achiral) |\n| **2** | the checklist combined with the equal-count rule |\n| **0** | improper operations assumed not to invert descriptors, so every compound is called achiral |\n\nErrors run in both directions, so nothing cancels.",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

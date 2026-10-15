@@ -1,0 +1,163 @@
+{
+  "source_repository": "https://github.com/fl0wstate/project-planck",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "count": 26,
+  "tasks": [
+    {
+      "id": "adiabatic_regime",
+      "task": "adiabatic_regime/task.json",
+      "review": "adiabatic_regime/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "annulene_quadrant",
+      "task": "annulene_quadrant/task.json",
+      "review": "annulene_quadrant/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "battery_cycle",
+      "task": "battery_cycle/task.json",
+      "review": "battery_cycle/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "battery_v3",
+      "task": "battery_v3/task.json",
+      "review": "battery_v3/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "belt_census",
+      "task": "belt_census/task.json",
+      "review": "belt_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "coordination_census",
+      "task": "coordination_census/task.json",
+      "review": "coordination_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "debye_screening",
+      "task": "debye_screening/task.json",
+      "review": "debye_screening/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "directional_cube",
+      "task": "directional_cube/task.json",
+      "review": "directional_cube/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "homoaromatic_sum",
+      "task": "homoaromatic_sum/task.json",
+      "review": "homoaromatic_sum/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "hopf_shift_census",
+      "task": "hopf_shift_census/task.json",
+      "review": "hopf_shift_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "ink_census",
+      "task": "ink_census/task.json",
+      "review": "ink_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "mixed_stereo_census",
+      "task": "mixed_stereo_census/task.json",
+      "review": "mixed_stereo_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "oligoester_census",
+      "task": "oligoester_census/task.json",
+      "review": "oligoester_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "oligoester_census_v2",
+      "task": "oligoester_census_v2/task.json",
+      "review": "oligoester_census_v2/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "organic_v3",
+      "task": "organic_v3/task.json",
+      "review": "organic_v3/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "osmotic_polymersome",
+      "task": "osmotic_polymersome/task.json",
+      "review": "osmotic_polymersome/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "pentalene_census",
+      "task": "pentalene_census/task.json",
+      "review": "pentalene_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "porphyrin_census",
+      "task": "porphyrin_census/task.json",
+      "review": "porphyrin_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "rotaxane_chirality",
+      "task": "rotaxane_chirality/task.json",
+      "review": "rotaxane_chirality/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "rotaxane_chirality_v2",
+      "task": "rotaxane_chirality_v2/task.json",
+      "review": "rotaxane_chirality_v2/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "speciation_optionalfork",
+      "task": "speciation_optionalfork/task.json",
+      "review": "speciation_optionalfork/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "stereogenic_census",
+      "task": "stereogenic_census/task.json",
+      "review": "stereogenic_census/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "stereogenic_census_v2",
+      "task": "stereogenic_census_v2/task.json",
+      "review": "stereogenic_census_v2/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "tetraradical_gap",
+      "task": "tetraradical_gap/task.json",
+      "review": "tetraradical_gap/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "tetraradical_v2",
+      "task": "tetraradical_v2/task.json",
+      "review": "tetraradical_v2/review.json",
+      "status": "draft_requires_author_review"
+    },
+    {
+      "id": "twistane_final",
+      "task": "twistane_final/task.json",
+      "review": "twistane_final/review.json",
+      "status": "draft_requires_author_review"
+    }
+  ]
+}

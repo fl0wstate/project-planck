@@ -1,0 +1,27 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_porphyrin_census.md",
+      "sha256": "c6e7a2641c13bcfa59fb957a600342b89e51169767c30c70cf2fce19e4a156a0"
+    },
+    {
+      "path": "planck_task_porphyrin_census_golden.md",
+      "sha256": "87b6dd73eedf7dcd6686539a30487fc4719055623953a3e10017464df87baf3b"
+    }
+  ],
+  "question_source": "planck_task_porphyrin_census.md / first PROMPT section",
+  "solution_source": "planck_task_porphyrin_census_golden.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# planck task - porphyrin atropisomer census (answer 41) — ***2/2 PLATFORM KILL***",
+  "legacy_wrong_branches": "| value | route |\n|---|---|\n| **61** | **primary**: the face-inverting $C_2$ rotations omitted; reduction by $C_4$ about the normal only |\n| **68** | as above, and meso-hydrogen positions wrongly given a face choice |\n| **56** | only face-preserving operations used, and meso-hydrogens mishandled |\n| **50** | reduction by all face-preserving operations, i.e. $C_4$ plus the vertical mirrors |\n| **44** | correct group, but the meso-hydrogen positions of Q3 wrongly given a face choice |\n| **30** | enantiomers identified and meso-hydrogens mishandled |\n| **27** | enantiomers wrongly identified, i.e. atropisomer counts reported instead of stereoisomer counts |\n\nErrors run in both directions: omitting the flip over-counts, identifying enantiomers under-counts. No combination reaches 41.",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

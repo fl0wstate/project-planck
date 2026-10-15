@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_directional_cube.md",
+      "sha256": "5d3133bf3109ed4eaa907b4665ad1f13922ee14f48ff146421af2ae7b4d03c01"
+    }
+  ],
+  "question_source": "planck_task_directional_cube.md / first PROMPT section",
+  "solution_source": "planck_task_directional_cube.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# Planck task - directional mixed-valence cube",
+  "legacy_wrong_branches": "| answer | reasoning error |\n|---:|---|\n| 4 | Count only the four proper-rotation classes of connected $M^{III}$ vertex domains and ignore N/O linkage orientations. |\n| 6 | Include reflections, merging mirror-related directional cages. |\n| 9 | Divide $216$ by 24 and assume every topology has a trivial stabilizer. |\n| 14 | Omit connectivity and include reflections. |\n| 24 | Apply the local valence rule but omit connectivity of the $M^{III}$ domain. |\n| 38 | Count labeled connected four-vertex domains but ignore linkage orientations and rotational equivalence. |\n| 216 | Enumerate all retained labeled states but never quotient by rotations. |\n| 450 | Enforce only local valence and perform no connectivity or symmetry reduction. |\n\nNone collides with 12.",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_belt_census.md",
+      "sha256": "206d6150dd9e7180ca7bd46fe86de2308f7b33ad66f670a29e86e1b89ed254a4"
+    }
+  ],
+  "question_source": "planck_task_belt_census.md / first PROMPT section",
+  "solution_source": "planck_task_belt_census.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# planck task — case-volume (planck_task_belt_census.md)",
+  "legacy_wrong_branches": "- 10 - Baird omitted entirely (T1 treated like S0): B4, B12, B14 wrongly called paratropic and B6 wrongly called diatropic; net -2. This is the primary predicted failure.\n- 10 - ribbon topology ignored (twists treated as cosmetic): B2, B13, B15 lost, B9 gained; net -2.\n- 10 - twist parity botched (two half-turns treated as still inverting, i.e. 'any twist = Moebius'): B3 and B8 wrongly called paratropic.\n- 10 - net charge not propagated into the pi count (atom count used directly): B7 read as 20 pi and B8 as 16 pi, both wrongly paratropic.\n- 8 - pure Hueckel reading: both Baird and all topology inversions dropped (B2, B4, B12, B13, B14, B15 lost; B6, B9 gained).\n- 9 - pure Hueckel plus treating B16 as a continuous 18-pi aromatic circuit (sp3 centre not recognised as severing the circuit).\n- 13 - everything right except B16, whose 18 sp2 CH are counted as a closed 4n+2 circuit.\n- 13 - Baird direction over-applied ('any triplet is aromatic'), so B6 is added; or Moebius over-applied ('any twisted belt is aromatic'), so B9 is added.\n- 14 - both over-applications at once (all triplets and all twisted belts called diatropic).\n- 11 - one unit-contribution slip anywhere: B(H) taken as a 2-electron donor (B12), C(+) as 2 (B14), C(-) as 0 (B13), O as 0 (B15), each N(=) as 2 (B11), or N(H) as 1 (B10) - each single slip flips exactly one belt.\n- 6 - Hueckel-only plus inverted twist-parity convention (odd treated as Hueckel, even as Moebius).\n- 5 - Hueckel-only plus systematic mis-assignment of heteroatom/charged-centre contributions (all of B11-B15 flipped).",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

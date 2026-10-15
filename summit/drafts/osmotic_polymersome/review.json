@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_osmotic_polymersome.md",
+      "sha256": "96a7dc178efce6aed50a4f529ebef62ec97230ac187e212f1378c37ff91f2146"
+    }
+  ],
+  "question_source": "planck_task_osmotic_polymersome.md / first PROMPT section",
+  "solution_source": "planck_task_osmotic_polymersome.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# Planck Task — Polymersome Osmotic Deflation (colligative Mn/Mw fork)",
+  "legacy_wrong_branches": "| Answer (nm) | Error |\n|---|---|\n| **212** | uses $M_w$ directly (colligative averaging error — the primary fork) |\n| **176** | treats NaCl as $i=1$ (not dissociated) |\n| **187** | both of the above |\n| **54** | uses the 400 mg/mL stock concentration, ignoring dilution into 500 µL |\n| 260 | concludes no net flux (misses that PSar raises external osmolarity) |\n| ~228 | applies the volume ratio to the radius directly (omits the cube root) |\n| 203 (via 202.68) | ignores the 495/500 dilution of NaCl — same rounded answer, harmless |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

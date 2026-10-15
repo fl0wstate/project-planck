@@ -1,0 +1,27 @@
+{
+  "schema_version": "summit-task-package-v1",
+  "task": {
+    "domain": "chemistry",
+    "subdomain": "Physical chemistry / electrochemistry",
+    "modality": "text_only",
+    "taskType": "not_applicable",
+    "imageCreationTool": "",
+    "imageNecessityExplanation": "",
+    "questionText": "I've been running a printed Zn–MnO₂ microcell on the bench rig for a durability study and I'm trying to reconcile the fade data before our group meeting. The cell is sealed and was thoroughly de-aerated before cycling. We cycle it galvanostatically with no rest steps, starting with a discharge: each cycle is a full discharge — down to whatever capacity the cell can actually deliver at that point in its life — followed by a full recharge. We discharge at $1.0\\ \\mathrm{mA\\,cm^{-2}}$, but we charge more gently, at $0.50\\ \\mathrm{mA\\,cm^{-2}}$, to keep the zinc deposits smooth.\n\nThe cathode side is honestly the boring part: $10.0\\ \\mathrm{mg}$ of electrodeposited MnO$_2$ per square centimetre that reliably gives $120\\ \\mathrm{mAh}$ per gram of MnO$_2$, cycle after cycle, with no fade of its own — we've verified the electrolyte never depletes and neither kinetics nor ohmic drop matter at these currents. The anode is where things get interesting: the printed electrode carries $7.22\\ \\mathrm{mg}$ of metallic zinc per square centimetre (take zinc as $65.38\\ \\mathrm{g\\,mol^{-1}}$ and use $F = 96485\\ \\mathrm{C\\,mol^{-1}}$).\n\nPost-mortem work on sister cells turned up exactly two parasitic processes, both active from the very first cycle. SEM showed that every time the anode strips during discharge, zinc equivalent to $4.0\\%$ of that cycle's discharge capacity ends up electronically orphaned — permanently disconnected from the active inventory. And our online mass spec picked up a steady hydrogen stream of $17.28$ micromoles of H$_2$ per day per square centimetre of anode whenever the cell is operating — flat, regardless of state of charge or current direction. Nothing else is degrading.\n\nThe sensor team downstream needs at least $0.80\\ \\mathrm{mAh\\,cm^{-2}}$ per discharge. During which numbered cycle does the delivered discharge capacity first drop below that? (Cycle 1 is the first discharge.) Give a single integer.",
+    "answerType": "exact_match",
+    "finalAnswer": [
+      "$29$"
+    ],
+    "acceptableAnswerVariants": [],
+    "multipleChoiceOptions": [],
+    "answerPrecision": {
+      "kind": "none"
+    },
+    "solution": "**Step 1 — Cathode ceiling.** $10.0\\ \\mathrm{mg} \\times 120\\ \\mathrm{mAh/g} = 1.200\\ \\mathrm{mAh\\,cm^{-2}}$ per discharge, every cycle.\n\n**Step 2 — Zinc inventory.** $7.22\\times10^{-3}/65.38 = 1.1043\\times10^{-4}$ mol; 2 e⁻ per Zn: $Z_0 = 2(1.1043\\times10^{-4})(96485)/3.6 = 5.9194\\ \\mathrm{mAh\\,cm^{-2}}$.\n\n**Step 3 — Corrosion rate in capacity units.** Each H₂ = 2 e⁻ = one Zn: $17.28\\ \\mu\\mathrm{mol/day} \\times 2F = 3.3345\\ \\mathrm{C/day} = 0.92626\\ \\mathrm{mAh\\,day^{-1}\\,cm^{-2}}$, i.e. $0.038594\\ \\mathrm{mAh}$ per operating hour.\n\n**Step 4 — Cycle duration (the load-bearing step).** Discharge $Q$ at 1.0 mA → $Q$ h. Recharge: the capacity-fixed cathode is full after exactly $Q$ of charge; at 0.50 mA that takes $2Q$ h. Total operating time $= 3Q$ h per cycle. (Prolonging the charge beyond $2Q$ h to \"restore the zinc reservoir\" would overcharge the cathode, which the prompt fixes at 120 mAh/g reversible — inadmissible.)\n\n**Step 5 — Per-cycle inventory loss.** Dead zinc $0.04Q$ + corrosion $0.038594 \\times 3Q = 0.115782Q$; total $0.155782\\,Q$.\n\n**Step 6 — Plateau phase.** While Zn suffices, $Q = 1.200$: loss $= 0.186938$ mAh/cycle. $Z_n = 5.9194 - (n-1)(0.186938)$; the reservoir buffers ~26 full cycles (capacity fade is zero throughout the plateau).\n\n**Step 7 — Fade phase.** Once zinc-limited, capacity decays geometrically at ratio $\\approx 0.844$ per cycle (exact ratio depends on the intra-cycle convention; the crossing does not).\n\n**Step 8 — Crossing.** Under every defensible convention the sequence passes 1.06 → 0.89 → 0.75 (±0.03 by convention): cycle 28 delivers $\\ge 0.85$, cycle 29 delivers $\\le 0.755 < 0.80$. First cycle below 0.80 = 29 in all cases.\n\n**Final Answer:** $29$",
+    "references": "1. Tagliaferri et al. ACS Appl. Mater. Interfaces 2025, 17, 38215–38224. doi:10.1021/acsami.5c05599 (ChemRxiv 2024-12-31) — Zn-excess microbattery, dead-Zn and HER losses. *Required: False.*\n2. Parker et al. Science 2017, 356, 415–418. doi:10.1126/science.aak9991 — Zn utilization and reservoir effects in rechargeable Zn cells. *Required: False.*",
+    "rubric": {
+      "criteria": [],
+      "commonWrongAnswers": []
+    }
+  }
+}

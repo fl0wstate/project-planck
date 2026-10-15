@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_battery_v3.md",
+      "sha256": "6932308bff1f257992ee87e597aded64fe250b4ff4f3f0851b39aef89addc3a6"
+    }
+  ],
+  "question_source": "planck_task_battery_v3.md / first PROMPT section",
+  "solution_source": "planck_task_battery_v3.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# Planck Task — Zn Microcell Fade v3 (amplified attractor + cathode-fade fork)",
+  "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| **15** | prolongs charge to restore the zinc reservoir (overcharges capacity-fixed cathode) — **the observed platform failure mode** |\n| **17** | ignores the cathode fade entirely |\n| **38** | symmetric cycle time: uses $2Q$ h despite the 0.20 mA charge current |\n| ~44 | 1 e⁻ per H₂ |\n| ~56 | corrosion counted only during discharge |\n| ~4 | CE-compounding from cycle 1, no reservoir plateau |\n| 16 / 19 | off-by-one at the crossing or plateau end |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

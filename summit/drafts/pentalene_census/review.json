@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_pentalene_census.md",
+      "sha256": "be2b16a1da132ca3d4eeac42204b55704f05a72a30ff1bb696fc7f9cb67d657c"
+    }
+  ],
+  "question_source": "planck_task_pentalene_census.md / first PROMPT section",
+  "solution_source": "planck_task_pentalene_census.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# Planck Task — Pentalene Non-Kekulé Census (from stump-from-paper workflow)",
+  "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| 0 | textbook reflex \"non-Kekulé = diradical\" or trusts LH nullity 2 for {1,3} |\n| 0 (2nd route) | misses that {1,3} lacks a Kekulé structure |\n| 2 | finds both non-Kekulé but declares both closed-shell, or counts {1,3},{5,7} as distinct |\n| 3 | no symmetry reduction, 3 labeled non-Kekulé pairs, botched filter |\n| 4 | counts Kekulé-possessing closed-shell isomers (inverted conjunction) |\n| 5 | counts all closed-shell isomers, ignores Kekulé condition |\n| 6 | reports total isomer count (misread) |\n| 15 | raw pair count, no symmetry |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

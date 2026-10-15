@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_stereogenic_census.md",
+      "sha256": "5b0321bfdb1d5268fc1831b13d744a23e3fdb8df792075296ca20e48682f127e"
+    }
+  ],
+  "question_source": "planck_task_stereogenic_census.md / first PROMPT section",
+  "solution_source": "planck_task_stereogenic_census.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# planck task — stereogenic-element census (answer 15)",
+  "legacy_wrong_branches": "| value | route |\n|---|---|\n| **10** | omit C-N axes entirely - PRIMARY predicted failure: stereocentres and biaryl C-C axes recognised, N-aryl axes never enumerated |\n| **10** | no axial stereogenicity of any kind; stereocentres only |\n| **11** | C-N axes omitted AND meso missed |\n| **14** | C2 alone mis-scored: the sole stereogenic element missed, compound called achiral |\n| **16** | C4 alone mis-scored: two axes multiplied to 4, meso form not recognised |\n| **16** | C6 alone mis-scored: meso 2,3-dibromobutane counted as a fourth isomer |\n| **16** | C5 alone mis-scored: 2,6-dimethyl ring treated as dissymmetric |\n| **17** | meso forms missed: 2^n applied to C4 and C6 |\n| **17** | C1 alone mis-scored: its 2,6-dimethyl ring treated as a stereogenic axis |\n| **18** | hindrance taken to imply stereogenicity: every 2,6-disubstituted ring counted as an axis without testing whether its two ortho substituents differ |\n| **20** | no dissymmetry test AND meso missed |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

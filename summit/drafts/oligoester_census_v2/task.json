@@ -1,0 +1,27 @@
+{
+  "schema_version": "summit-task-package-v1",
+  "task": {
+    "domain": "chemistry",
+    "subdomain": "Organic chemistry",
+    "modality": "text_only",
+    "taskType": "not_applicable",
+    "imageCreationTool": "",
+    "imageNecessityExplanation": "",
+    "questionText": "Nine cyclic oligoesters are described. In each, every residue is one of two kinds: residue X, derived from 2-hydroxybutanoic acid, contributing $-\\mathrm{O}-\\mathrm{CH}(\\mathrm{C_2H_5})-\\mathrm{C(O)}-$ to the ring, or residue Y, derived from 2-hydroxypropanoic acid, contributing $-\\mathrm{O}-\\mathrm{CH}(\\mathrm{CH_3})-\\mathrm{C(O)}-$. The residues are joined so that the sequence oxygen, then alkyl-bearing carbon, then carbonyl carbon runs the same way round the whole macrocycle. Every residue therefore carries one stereocentre, at the carbon bearing its alkyl group.\n\nEach compound is specified by listing its residues in order with the configuration of each, read round the ring in the direction running from the ester oxygen of a residue to the carbonyl carbon of that same residue. Each list is cyclic, the residue following the last being the first.\n\nG1: X(R) X(S) X(R) X(S)\n\nG2: X(R) X(R) X(R) X(S)\n\nG3: X(R) X(R) X(S)\n\nG4: X(R) X(S) X(R) X(S) X(R) X(S)\n\nG5: X(R) X(R) X(S) X(R) X(S) X(S)\n\nG6: X(R) X(R) X(R) X(S) X(R) X(S) X(S) X(S)\n\nG7: X(R) Y(S) X(R) Y(S) X(R) Y(S)\n\nG8: X(R) Y(S) X(R) Y(S)\n\nG9: X(R) Y(R) X(S) Y(S) X(R) Y(R) X(S) Y(S)\n\nTake every macrocycle to be conformationally mobile, with all ring conformations freely accessible, and take the configuration at every stereocentre to be fixed. Regard a compound as chiral when no accessible conformation of it can be superimposed on its mirror image. Disregard any process that makes or breaks a covalent bond, and assume dilute solution in an achiral solvent with no added chiral agent.\n\nHow many of the nine compounds are chiral? Report a single integer.",
+    "answerType": "exact_match",
+    "finalAnswer": [
+      "$6$"
+    ],
+    "acceptableAnswerVariants": [],
+    "multipleChoiceOptions": [],
+    "answerPrecision": {
+      "kind": "none"
+    },
+    "solution": "Write the descriptors as a cyclic sequence $c_0 \\ldots c_{n-1}$ and the residue kinds as $t_0 \\ldots t_{n-1}$. The mirror image has the same constitution with every descriptor inverted. Two specifications denote the same compound exactly when one is carried onto the other by a shift $k$ that preserves the residue pattern, $t_{i+k} = t_i$ for all $i$; reversal of the order is not available, because the ester sense runs one way round the ring. Hence\n\n> the compound is **achiral** exactly when there is a shift $k$ with $t_{i+k} = t_i$ and $c_{i+k} = \\bar{c_i}$ for every $i$.\n\n| | $n$ | residues | descriptors | permitted shifts | achiral? |\n|---|---|---|---|---|---|\n| G1 | 4 | XXXX | R S R S | 0,1,2,3 | achiral, $k=1$ |\n| G2 | 4 | XXXX | R R R S | 0,1,2,3 | **chiral** |\n| G3 | 3 | XXX | R R S | 0,1,2 | **chiral** |\n| G4 | 6 | XXXXXX | R S R S R S | 0..5 | achiral, $k=1$ |\n| G5 | 6 | XXXXXX | R R S R S S | 0..5 | **chiral** (fork 1) |\n| G6 | 8 | XXXXXXXX | R R R S R S S S | 0..7 | **chiral** (fork 1) |\n| G7 | 6 | XYXYXY | R S R S R S | 0,2,4 | **chiral** (fork 2) |\n| G8 | 4 | XYXY | R S R S | 0,2 | **chiral** (fork 2) |\n| G9 | 8 | XYXYXYXY | R R S S R R S S | 0,2,4,6 | achiral, $k=2$ |\n\n**Chiral: G2, G3, G5, G6, G7, G8. Answer = 6.**\n\nTwo structural facts the solution should state:\n\n- **Odd ring size forces chirality (G3).** Applying a shift $k$ that satisfies the condition $n$ times inverts the descriptors an odd number of times while returning every index to itself, giving $c_i = \\bar{c_i}$, which is impossible. No odd-membered ring in this family is ever achiral.\n- **G5 and G6 are chiral although their mirror images are reversals of themselves.** That relationship is not a symmetry of a directional macrocycle, which is precisely the point of fork 1.",
+    "references": "**Source:** Lam, N. Y. S.; Dhankhar, J.; Lahdenpera, A. S. K.; Phipps, R. J. *J. Am. Chem. Soc.* **2024**, *146*, 33302-33308. doi:10.1021/jacs.4c13919. Published 26 Nov 2024, CC BY 4.0, open access via PMC. Concept borrowed only.",
+    "rubric": {
+      "criteria": [],
+      "commonWrongAnswers": []
+    }
+  }
+}

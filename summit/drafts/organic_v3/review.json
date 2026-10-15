@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_organic_v3.md",
+      "sha256": "4f1a1c3dd2fe2ff6a2794d35725d21a8aa118bb67c1419fbcfd98e13ef44fc31"
+    }
+  ],
+  "question_source": "planck_task_organic_v3.md / first PROMPT section",
+  "solution_source": "planck_task_organic_v3.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# Planck Task — Organic v3 (diastereomer-gated acetoxonium scrambling)",
+  "legacy_wrong_branches": "| Error | Answer (%) |\n|---|---|\n| Applies NGP scrambling to both diastereomers | 50.0 |\n| Treats stereochemistry and label as independent | 17.5 |\n| Ignores the diastereomer split entirely | 25.0 or 50.0 |\n| Inverts the gate (cis participates, trans not) | 15.0 |\n| Believes NGP gives net retention only (no racemization) | 0.0 |\n| Counts direct-pathway product as (1R,2R) | 65.0 |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}

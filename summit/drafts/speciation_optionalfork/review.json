@@ -1,0 +1,23 @@
+{
+  "status": "draft_requires_author_review",
+  "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
+  "sources": [
+    {
+      "path": "planck_task_speciation_optionalfork.md",
+      "sha256": "2b766696e37edc95f3d934020dd9dfc440c2be17d4bafc6b7feda148217750f1"
+    }
+  ],
+  "question_source": "planck_task_speciation_optionalfork.md / first PROMPT section",
+  "solution_source": "planck_task_speciation_optionalfork.md",
+  "answer_source": "Explicit existing answer key; no answer verification performed.",
+  "source_title": "# Planck Task — Redox Speciation, Optional-Fork + Two-Root (HARDEST VERIFIED)",
+  "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| 12.413 | drops M(HL) as \"negligible\" (formation constant 10× smaller than ML) — the optional fork; shifts acidic root 4.349→4.195 |\n| 12.560 | includes M(HL) in metal balance but forgets it as a ligand equivalent |\n| 4.298 | drops hydrolysis → high-pH root vanishes, reports only one root |\n| ~12.41 | uses [HL⁻]=ℓ (wrong protonation factor) — reduces to near-omission |\n| single value ~4.35 or ~8.22 | finds one root, misses the non-monotonic second |\n| 3.74/etc | ionic/stoichiometric slips in ligand balance |\n| 8.218 | reports only the basic root (monotonic assumption) |",
+  "required_author_actions": [
+    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
+    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
+    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
+    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
+    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
+  ]
+}
