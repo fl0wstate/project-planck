@@ -1,5 +1,7 @@
 # Project Planck question packages
 
+**Preparing human-authored replacements?** Start with the [per-question authorship and replacement checklist](summit/AUTHOR_REWRITE_GUIDE.md). It links exact-text review sheets for all 26 tasks and identifies the 78 assistant-generated rubric criteria. Existing ZIPs remain the AI-assisted versions until replacements are supplied and packaged.
+
 ## Download and submit one question at a time
 
 **[Open the individual ZIP download page](summit/DOWNLOADS.md)**
