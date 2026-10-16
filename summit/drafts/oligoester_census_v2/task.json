@@ -20,7 +20,26 @@
     "solution": "Write the descriptors as a cyclic sequence $c_0 \\ldots c_{n-1}$ and the residue kinds as $t_0 \\ldots t_{n-1}$. The mirror image has the same constitution with every descriptor inverted. Two specifications denote the same compound exactly when one is carried onto the other by a shift $k$ that preserves the residue pattern, $t_{i+k} = t_i$ for all $i$; reversal of the order is not available, because the ester sense runs one way round the ring. Hence\n\n> the compound is **achiral** exactly when there is a shift $k$ with $t_{i+k} = t_i$ and $c_{i+k} = \\bar{c_i}$ for every $i$.\n\n| | $n$ | residues | descriptors | permitted shifts | achiral? |\n|---|---|---|---|---|---|\n| G1 | 4 | XXXX | R S R S | 0,1,2,3 | achiral, $k=1$ |\n| G2 | 4 | XXXX | R R R S | 0,1,2,3 | **chiral** |\n| G3 | 3 | XXX | R R S | 0,1,2 | **chiral** |\n| G4 | 6 | XXXXXX | R S R S R S | 0..5 | achiral, $k=1$ |\n| G5 | 6 | XXXXXX | R R S R S S | 0..5 | **chiral** (fork 1) |\n| G6 | 8 | XXXXXXXX | R R R S R S S S | 0..7 | **chiral** (fork 1) |\n| G7 | 6 | XYXYXY | R S R S R S | 0,2,4 | **chiral** (fork 2) |\n| G8 | 4 | XYXY | R S R S | 0,2 | **chiral** (fork 2) |\n| G9 | 8 | XYXYXYXY | R R S S R R S S | 0,2,4,6 | achiral, $k=2$ |\n\n**Chiral: G2, G3, G5, G6, G7, G8. Answer = 6.**\n\nTwo structural facts the solution should state:\n\n- **Odd ring size forces chirality (G3).** Applying a shift $k$ that satisfies the condition $n$ times inverts the descriptors an odd number of times while returning every index to itself, giving $c_i = \\bar{c_i}$, which is impossible. No odd-membered ring in this family is ever achiral.\n- **G5 and G6 are chiral although their mirror images are reversals of themselves.** That relationship is not a symmetry of a directional macrocycle, which is precisely the point of fork 1.",
     "references": "**Source:** Lam, N. Y. S.; Dhankhar, J.; Lahdenpera, A. S. K.; Phipps, R. J. *J. Am. Chem. Soc.* **2024**, *146*, 33302-33308. doi:10.1021/jacs.4c13919. Published 26 Nov 2024, CC BY 4.0, open access via PMC. Concept borrowed only.",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $6$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Classifies G5 as chiral because sequence reversal is not an allowed equivalence of the directional ester ring.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Classifies G7 as chiral because its residue-preserving shifts are only $0,2,4$, none of which inverts every descriptor.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -35,11 +35,9 @@
   "source_title": "# Planck Task — Debye-Screened Lysine Repulsion (timeless physics, post-cutoff-safe)",
   "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| 3.09 | uses z=1 for Mg²⁺ (misses z²=4), I=0.0725 M |\n| 3.21 | treats total salt 65 mM as ionic strength directly |\n| 3.48 | ignores MgCl₂ entirely, I=0.050 M |\n| 2.49 | drops the 1.40 nm (1–3) pair |\n| 3.74 | uses 0.70 nm for all three pairs |\n| 6.33 | bare (unscreened) Coulomb, κ→0 |\n| ~5.5 | forgets the ×2 on the two equal near pairs / other miscount |",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

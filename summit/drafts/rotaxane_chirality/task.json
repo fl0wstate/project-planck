@@ -20,7 +20,26 @@
     "solution": "Set the axle along $z$; the macrocycle encircles it. Any symmetry operation of a [2]rotaxane must map each component onto itself and preserve the axle axis. The only candidate IMPROPER operations are therefore: (i) $\\sigma_v$ = a mirror plane containing the axle axis (keeps each stopper on its own side, keeps each macrocycle face on its own side); (ii) $\\sigma_h$ = the macrocycle's own mean plane, or any $S_n$ about $z$, all of which exchange the two halves of the axle AND exchange the two faces of the ring. In-plane $C_2$ and rotations about $z$ are proper and irrelevant. Hence:\n\nachiral iff [macrocycle has a $\\sigma_v$ AND axle has a mirror plane containing its axis] OR [macrocycle is face-symmetric ($\\sigma_h$) AND the axle's two ends are exchangeable by an improper operation].\n\nComponent analysis (8 independent judgments).\nMacrocycles:\n- $M1$ (head-to-tail hexa-amide): going round the ring the amides all read $\\mathrm{N}\\to\\mathrm{C}$ in one sense. A $\\sigma_v$ (or an in-plane $C_2$) reverses that sense, so it is constitutionally forbidden: NO $\\sigma_v$. The ring is planar with two chemically equivalent faces: HAS $\\sigma_h$ (point group $C_{6h}$; the macrocycle itself is achiral, yet \"orientated\").\n- $M2$ (alternating diacyl/diamine): mirror lines through opposite residues map acyl onto acyl and amine onto amine and preserve amide sense: HAS $\\sigma_v$; planar, HAS $\\sigma_h$ ($D_{3h}$).\n- $M3$ ($M1$ + one-face strap): no $\\sigma_v$ (orientation) and no $\\sigma_h$ (strap on one face only) $\\Rightarrow$ $C_1$, the macrocycle is itself CHIRAL (planar-chiral strapped ring).\n- $M4$ ($M2$ + one-face strap): the mirror plane through the two strapped opposite residues survives (the strap is symmetric in it): HAS $\\sigma_v$; strap kills $\\sigma_h$ and $i$. Point group $C_s$: achiral, faces distinguishable. This is the trap case: distinguishable faces do NOT make a ring \"orientated\".\nDumbbells (a stereocentre can never lie on a mirror plane, so any axle bearing stereocentres has no $\\sigma_v$):\n- $A1$: identical ends, no stereocentres: has $\\sigma_v$; ends exchangeable by an improper op (midpoint mirror).\n- $A2$: different stoppers: has $\\sigma_v$; ends NOT exchangeable.\n- $A3$: constitutionally identical ends, $(R)$ and $(S)$ = meso axle: no $\\sigma_v$; ends exchangeable improperly (midpoint $\\sigma$/$i$, which inverts $R\\to S$ correctly).\n- $A4$: $(R),(R)$: no $\\sigma_v$; the two ends are exchanged only by a PROPER $C_2$, never by an improper op (a mirror would demand $R$ opposite $S$). Chiral axle.\n\n16-case table (achiral unless marked):\n$M1A1$ achiral ($\\sigma_h$); $M1A2$ CHIRAL (canonical mechanically planar chiral rotaxane); $M1A3$ achiral - $\\sigma_h$ swaps the ends and inverts $R\\leftrightarrow S$, so the mechanical element and the two centres form a meso rotaxane; $M1A4$ CHIRAL.\n$M2A1$ achiral ($\\sigma_v$); $M2A2$ achiral ($\\sigma_v$: an unsymmetrical axle alone is not enough); $M2A3$ achiral ($\\sigma_h$); $M2A4$ CHIRAL (chiral component).\n$M3A1$-$M3A4$ all CHIRAL (a rotaxane containing a chiral component can have no improper operation).\n$M4A1$ achiral ($\\sigma_v$); $M4A2$ achiral ($\\sigma_v$ survives despite distinguishable faces); $M4A3$ CHIRAL ($\\sigma_v$ destroyed by the stereocentres, $\\sigma_h$/$i$ destroyed by the strap); $M4A4$ CHIRAL.\n\nChiral count $=2+1+4+2=9$.",
     "references": "**Source inspiration:** Beilstein J. Org. Chem. 2025, 21, 10 (doi:10.3762/bjoc.21.10) — physics borrowed only, no numbers/compounds reused.",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $9$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Identifies M1 as lacking $\\sigma_v$ but possessing $\\sigma_h$.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Identifies M4 as possessing $\\sigma_v$ despite its distinguishable faces.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

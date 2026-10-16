@@ -8,6 +8,8 @@ import re
 import subprocess
 import zipfile
 
+from rubrics import rubric_for
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = """
@@ -126,7 +128,7 @@ def build(destination):
             if digits else {"kind": "none"},
             "solution": solution,
             "references": references,
-            "rubric": {"criteria": [], "commonWrongAnswers": []},
+            "rubric": rubric_for(slug, f"${answer}$"),
         }
         folder = destination / slug
         folder.mkdir()
@@ -134,7 +136,8 @@ def build(destination):
             "schema_version": "summit-task-package-v1", "task": task,
         })
         review = {
-            "status": "draft_requires_author_review",
+            "status": "complete_for_ai_permitted_workflow",
+            "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics.",
             "source_commit": revision,
             "sources": [{"path": str(path.relative_to(ROOT)), "sha256": digest(path)}
                         for path in inputs],
@@ -145,8 +148,7 @@ def build(destination):
             "legacy_wrong_branches": trim_section(first_section(original, "wrong branches")
                                                   or first_section(original, "distinct wrong")),
             "required_author_actions": [
-                "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-                "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
+                "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
                 "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
                 "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
                 "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
@@ -193,6 +195,37 @@ def structural_errors(package):
         or precision["kind"] == "significant_figures" and precision["digits"] == 0
     ):
         errors.append("answerPrecision.digits")
+    criteria = task.get("rubric", {}).get("criteria", [])
+    if not isinstance(criteria, list) or not 3 <= len(criteria) <= 5:
+        errors.append("rubric must contain 3–5 criteria")
+    elif any(not isinstance(item, dict) or not isinstance(item.get("description"), str)
+             or not item["description"].strip() or type(item.get("points")) is not int
+             or item["points"] <= 0 or type(item.get("isFinalAnswer")) is not bool
+             or not isinstance(item.get("id"), str) or not item["id"] for item in criteria):
+        errors.append("rubric criterion fields")
+    else:
+        if sum(item["points"] for item in criteria) != 10:
+            errors.append("rubric points must total 10")
+        if len({item["id"] for item in criteria}) != len(criteria):
+            errors.append("rubric criterion IDs must be unique")
+        final = [item for item in criteria if item["isFinalAnswer"]]
+        if len(final) != 1:
+            errors.append("rubric needs exactly one final-answer criterion")
+        elif len(answers) == 1:
+            if answers[0] not in final[0]["description"]:
+                errors.append("final-answer criterion must state the key")
+            if any(item["points"] >= final[0]["points"] for item in criteria if not item["isFinalAnswer"]):
+                errors.append("final-answer criterion must carry the most points")
+    normalize = lambda value: value.strip().strip("$").strip().casefold()
+    accepted = task.get("acceptableAnswerVariants", [])
+    wrong = task.get("rubric", {}).get("commonWrongAnswers", [])
+    if not isinstance(accepted, list) or not isinstance(wrong, list) or any(
+        not isinstance(value, str) or not value.strip() or len(value) > 5000
+        for value in accepted + wrong
+    ):
+        errors.append("answer variants and wrong answers must be string arrays")
+    elif set(map(normalize, wrong)) & set(map(normalize, answers + accepted)):
+        errors.append("common wrong answers include an accepted answer")
     return errors
 
 
@@ -216,14 +249,42 @@ def check(destination):
         for source in review["sources"]:
             if digest(ROOT / source["path"]) != source["sha256"]:
                 raise ValueError(f"Source changed: {source['path']}")
-    print(f"{len(manifest['tasks'])} drafts passed migration structure/source checks. "
-          "This is not Summit validation or scientific verification; rubrics remain incomplete.")
+    print(f"{len(manifest['tasks'])} tasks passed structure, rubric, review-text and source checks. "
+          "These local checks do not certify scientific correctness or platform acceptance.")
+
+
+def complete(destination):
+    manifest_path = destination / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    for record in manifest["tasks"]:
+        path = destination / record["task"]
+        package = json.loads(path.read_text())
+        task = package["task"]
+        if not task.get("rubric", {}).get("criteria"):
+            task["rubric"] = rubric_for(record["id"], task["finalAnswer"][0])
+        errors = structural_errors(package)
+        if errors:
+            raise ValueError(f"{record['id']}: {errors}")
+        write_json(path, package)
+        review_path = destination / record["review"]
+        review = json.loads(review_path.read_text())
+        review["status"] = record["status"] = "complete_for_ai_permitted_workflow"
+        review["rubric_authorship"] = "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
+        review["required_author_actions"] = [
+            "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+            "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+            "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks.",
+        ]
+        write_json(review_path, review)
+    manifest["workflow"] = "AI-assisted content permitted; complete package fields, not a platform acceptance certification."
+    write_json(manifest_path, manifest)
+    package_drafts(destination)
 
 
 def package_drafts(destination):
     check(destination)
     manifest = json.loads((destination / "manifest.json").read_text())
-    archive_folder = destination / "draft-zips"
+    archive_folder = destination.parent / "packages"
     archive_folder.mkdir(exist_ok=True)
     for record in manifest["tasks"]:
         with zipfile.ZipFile(archive_folder / f"{record['id']}.zip", "w",
@@ -231,7 +292,7 @@ def package_drafts(destination):
             info = zipfile.ZipInfo("task.json", date_time=(2026, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             archive.writestr(info, (destination / record["task"]).read_bytes())
-    with zipfile.ZipFile(destination / "all-question-imports.zip", "w",
+    with zipfile.ZipFile(archive_folder / "all-questions.zip", "w",
                          compression=zipfile.ZIP_DEFLATED) as bundle:
         entries = {
             "README.txt": (
@@ -239,12 +300,13 @@ def package_drafts(destination):
                 "Extract this bundle, then import one question ZIP at a time.\n"
                 "Each question ZIP contains task.json at its root, including the question, "
                 "answer key and solution.\n\n"
-                "These are import drafts, not submission-ready tasks. All 26 source tasks "
-                "currently lack the required author-written rubric. Complete 3–5 objective "
-                "criteria totaling 10 points, with exactly one final-answer criterion.\n"
-                "Review the task's review.json in the repository for remaining author actions. "
-                "Confirm text-only eligibility, authorship, references, and formatting before "
-                "submitting. No images are included because none exist in the source data.\n"
+                "All packages include a 10-point rubric with one final-answer criterion.\n"
+                "Rubrics are AI-assisted, based on the existing solutions. Use these packages "
+                "only in a workflow that permits AI-assisted content. They do not satisfy the "
+                "archived Summit human-authorship restriction.\n"
+                "After import, inspect the form and submit each question individually. "
+                "Confirm assigned domain and text-only eligibility. Local package validation "
+                "does not certify scientific correctness or platform acceptance.\n"
             ).encode(),
         }
         entries.update({f"{record['id']}.zip":
@@ -254,12 +316,24 @@ def package_drafts(destination):
             info = zipfile.ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             bundle.writestr(info, content)
-    print(f"Created {len(manifest['tasks'])} import-only draft ZIPs; author completion required.")
+    base = "https://github.com/fl0wstate/project-planck/raw/refs/heads/main/summit/packages/"
+    download_lines = [
+        "# Download individual question packages", "",
+        "Each ZIP contains a complete `task.json`: question, answer, solution and a 10-point rubric. Download one ZIP and import it, then review the form and press Submit. Do not upload the all-questions bundle as one task.", "",
+        "**AI-permitted workflows only.** Rubrics are AI-assisted. These packages do not meet the archived Summit human-authorship restriction. Platform acceptance, scientific correctness and your assigned domain/text-only eligibility are not certified by local checks.", "",
+        f"[Download all {len(manifest['tasks'])} ZIPs together]({base}all-questions.zip) (extract before importing).", "",
+        "| Question | Individual ZIP |", "|---|---|",
+    ]
+    for record in manifest["tasks"]:
+        slug = record["id"]
+        download_lines.append(f"| {slug.replace('_', ' ')} | [Download ZIP]({base}{slug}.zip) |")
+    (destination.parent / "DOWNLOADS.md").write_text("\n".join(download_lines) + "\n")
+    print(f"Created {len(manifest['tasks'])} complete AI-permitted packages and download index.")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["build", "check", "package"])
+    parser.add_argument("command", choices=["build", "check", "package", "complete"])
     parser.add_argument("--output", type=Path, default=Path(__file__).parent / "drafts")
     arguments = parser.parse_args()
-    {"build": build, "check": check, "package": package_drafts}[arguments.command](arguments.output)
+    {"build": build, "check": check, "package": package_drafts, "complete": complete}[arguments.command](arguments.output)

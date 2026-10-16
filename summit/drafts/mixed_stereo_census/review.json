@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -85,11 +85,9 @@
   "source_title": "# planck task — mixed-mechanism stereoisomer census (v4, SMILES representation)",
   "legacy_wrong_branches": "Deltas from 18:\n\n| misjudgment | affected | delta |\n|---|---|---|\n| bridgehead carbons treated as independent stereocentres | F4 → 8 | **+4** |\n| **the observed v1 failure**: diastereomers found, chirality of each never checked | F4 → 2 | **−2** |\n| the same skip on the plain ring alcohol (\"another cis/trans pair\") | F6 → 2 | **−2** |\n| substituted ring carbons read as stereocentres — blocked in v3: identical substituents make the slogan inapplicable | F1 → 4 | (+2, closed) |\n| the two isopropyl branches read as different | F2 → 2 | +1 |\n| meso relationship missed | F3 → 4 | +1 |\n| pyramidal nitrogen treated as configurationally stable | F5 → 2 | +1 |\n| the allylic stereocentre missed | F7 → 1 | −1 |\n| the dead axis counted as stereogenic | F8 → 2 | +1 |\n\nThe v1 responder's exact route (chirality layer skipped at the cage) now costs −2 at F4 **and** −2 at F6, landing on 14 — four away from the truth, with no compensating error available in the same belief system: a solver who skips the chirality check on diastereomers cannot simultaneously invent extra enantiomer pairs elsewhere.\n\n**Cancellation, after v3.** The F1(+2)/F4(−2) channel fired in a real v2 response — proof that \"requires contradictory beliefs\" is no defense, since solvers apply local slogans per case rather than consistent frameworks. v3 closes it by making F1's substituents identical, so the slogan that generated the +2 (\"different substituents mean no collapse\") has no purchase. Remaining pairs: F2 (+1) against F7 (−1) requires reading two identical branches as different and two different ring paths as identical; F5 (+1) against F7 (−1) requires a nitrogen treated as configurationally stable alongside a missed allylic stereocentre. Both are ±1 side-channels; the dominant catches (F4 at −2 skip / +4 bridgehead, twice bitten) have no partner of matching magnitude.\n\n**The F1/F6 pair after the swap.** Both are disubstituted cyclohexanes with cis and trans forms; F1 (1,4, identical substituents) gives 2 and F6 (1,3, different substituents) gives 4. The surface still invites \"another ring diol/alcohol → cis/trans → 2\", which loses 2 at F6 for a solver who never asks the chirality question there — though v2 showed most reach F6's 4 by stereocentre counting instead. F6's remaining role is heterogeneity and the −2 skip channel; the load-bearing catch is F4.",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

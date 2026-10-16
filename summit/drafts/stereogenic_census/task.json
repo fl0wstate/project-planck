@@ -20,7 +20,26 @@
     "solution": "| | analysis | count |\n|---|---|---|\n| **C1** | One stereocentre (the $N$-CH(CH_3)Ph carbon: N, CH_3, Ph, H all different). The N-aryl bond is strongly hindered, but the aryl ring bears **two identical** ortho methyls, so rotation by 180 degrees regenerates the same structure and the axis is **not** stereogenic. $2^1$ | **2** |\n| **C2** | No stereocentre. The N-aryl axis has *tert*-butyl on one ortho position and methyl on the other (dissymmetric), the N end bears methyl and acetyl (dissymmetric), and 2,6-disubstitution makes rotation slow. One stereogenic axis. $2^1$ | **2** |\n| **C3** | The C2 axis plus the C1 stereocentre, independent. $2^2$ | **4** |\n| **C4** | Two constitutionally identical stereogenic axes of the C2 type. (aR,aR) and (aS,aS) are enantiomers; (aR,aS) is **meso**, since the para-phenylene's inversion centre exchanges the halves and converts aR into aS. | **3** |\n| **C5** | No stereocentre. Three ortho substituents make rotation slow, but the 2,6-dimethyl ring has **two identical** ortho substituents, so the biaryl axis is not stereogenic. Achiral. | **1** |\n| **C6** | Two stereocentres, constitutionally identical: (R,R), (S,S), and one meso (R,S). | **3** |\n\n**Sum = 2 + 2 + 4 + 3 + 1 + 3 = 15.**\n\nAmide C(O)-N rotamers are excluded by the stated timescale: tertiary-amide rotation barriers of roughly 15-20 kcal/mol give lifetimes of seconds at 25 degrees C, far below \"hours\". The stipulation resolves this deductively rather than leaving it to judgment.",
     "references": "**Source:** Akimoto, N.; Takaya, K.; Kasashima, Y.; Watanabe, K.; Yoshida, Y.; Mino, T. \"Pd-Catalyzed asymmetric allylic amination with isatin using a P,olefin-type chiral ligand with C-N bond axial chirality.\" *Beilstein J. Org. Chem.* **2025**, *21*, 1018-1023. doi:10.3762/bjoc.21.83. Published **23 May 2025**, CC BY 4.0. Comfortably pre-cutoff (two months of margin, unlike bjoc.21.119 which sits exactly on 31 Jul 2025).",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $15$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Obtains $2$ stereoisomers for C1 because its identical ortho substituents prevent axial stereogenicity.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains $3$ stereoisomers for C4 after identifying the mixed axial configurations as one meso form.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

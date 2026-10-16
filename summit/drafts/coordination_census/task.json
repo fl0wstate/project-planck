@@ -20,7 +20,26 @@
     "solution": "**Step 1.** Count a structure as a separate stereoisomer only if it is isolable at $25\\,^\\circ\\mathrm{C}$ over hours; enantiomers count as two, as stated.\n\n**Step 2.** A chelating ligand can only bridge two coordination sites that are mutually cis, since its donor atoms are held a fixed short distance apart and trans sites lie on opposite sides of the metal.\n\n**Step 3.** A structure is chiral when no improper symmetry operation maps it onto itself; for a coordination compound this must be tested arrangement by arrangement, not inferred from whether ligands are cis or trans.\n\n---\n\n**Step 4.** H1: the four donors lie in one plane with the metal, and that plane is a mirror plane for every arrangement, so no square-planar arrangement of this composition can be chiral.\n\n**Step 5.** H1's two chlorides may be mutually cis or mutually trans, giving two diastereomers and no enantiomers. **H1 = 2.**\n\n**Step 6.** H2: a tetrahedral centre carrying four different ligands has no improper symmetry operation, exactly as an sp³ carbon with four different substituents does not.\n\n**Step 7.** H2 therefore exists as one enantiomeric pair. **H2 = 2.**\n\n**Step 8.** H3: ethane-1,2-diamine is a chelate, so by Step 2 it occupies one of the twelve mutually-cis site pairs (the twelve edges of the octahedron), and the four remaining sites carry four different ligands in $4! = 24$ ways.\n\n**Step 9.** H3 therefore has $12 \\times 24 = 288$ labelled arrangements, and the octahedron has 24 proper rotations, giving $288/24 = 12$ distinct structures provided no arrangement is fixed by a non-trivial rotation — which none is, since the four monodentate ligands are all different.\n\n**Step 10.** H3: none of the twelve retains any improper operation either, because a mirror would have to fix the chelate and exchange monodentate ligands that are all different. Every one is chiral, forming six enantiomeric pairs. **H3 = 12.**\n\n**Step 11.** H4: glycinate chelates through its nitrogen and one carboxylate oxygen, two *different* donors, and by Step 2 occupies two adjacent sites of the square plane.\n\n**Step 12.** H4's remaining two sites carry ammonia and chloride, and the two arrangements differ by which is trans to nitrogen and which is trans to oxygen; both are achiral by Step 4. **H4 = 2.**\n\n**Step 13.** H5: the two chelates occupy four sites, leaving ammonia and chloride either mutually trans or mutually cis.\n\n**Step 14.** H5's trans arrangement has a mirror plane containing both monodentate ligands and is achiral; the cis arrangement has none and forms an enantiomeric pair. **H5 = 3.**\n\n**Step 15.** H6: terpyridine's three pyridine rings are joined directly at their 2- and 6-positions, so the three nitrogen donors are held in one plane in a fixed near-linear array.\n\n**Step 16.** H6: that rigid geometry allows only a meridional arrangement — the two terminal nitrogens must be mutually trans — since a facial arrangement would require the terminal donors to be cis, which the ligand's fused framework cannot reach.\n\n**Step 17.** H6: with terpyridine meridional, the three remaining sites are one trans to the central nitrogen and two trans to the terminal nitrogens; those latter two are mutually trans, so by Step 2 oxalate cannot span them.\n\n**Step 18.** H6: oxalate must therefore use the site trans to the central nitrogen plus one of the other two, and those two choices are related by a symmetry of the rest of the structure, so they give the same compound; chloride takes the last site, and the result has a mirror plane. **H6 = 1.**\n\n**Step 19.** Sum the six counts: $2 + 2 + 12 + 2 + 3 + 1$.\n\n**Final Answer: 22**",
     "references": "**Source:** none. All six complexes are chosen for this problem; no compound, measurement or claim is taken from any paper, so there is no cutoff exposure. Every principle used is textbook coordination chemistry.",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $22$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Obtains $12$ distinct stereoisomers for H3, counting enantiomers separately.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains $2$ distinct arrangements for H4 from the inequivalent N and O chelate donors.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

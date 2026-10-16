@@ -20,7 +20,26 @@
     "solution": "GATE (must be settled before any counting): the electron-count rule that predicts a diatropic (aromatic-type) perimeter current is not a single rule but a composition of three independent binary facts per entry — (i) the number of pi electrons in the circuit, (ii) the topology of the circuit (Huckel vs Mobius, set by the PARITY of half-twists, i.e. by tau/180 being even or odd, NOT by whether the ring is twisted), (iii) the spin of the interrogated state (Baird's rule: the count rule inverts in T1). Each of (ii) and (iii) inverts the reference Huckel-singlet rule, so\n\n  diatropic  <=>  [ n_pi = 4n+2 ]  XOR  [ tau/180 odd ]  XOR  [ triplet ],\n  and only if the cyclic conjugated circuit is unbroken.\n\nTwo inversions cancel: a Mobius triplet obeys the same 4n+2 criterion as a planar singlet.\n\nStep 1 - pi counts. Neutral C_mH_m all-sp2 ring: m pi electrons. Charges shift the count: [C16H16]2- = 18; [C15H15]+ = 14. Entry 10 has one sp3 CH2, so the 18 sp2 carbons form an OPEN 18-pi polyene: there is no closed conjugated circuit and hence no macrocyclic ring current at all, whatever the count.\nStep 2 - topology. tau = 0 or 360 deg => even number of half-twists (0 or 2) => Huckel topology (phase-continuous). tau = 180 or 540 deg => 1 or 3 half-twists, odd => Mobius topology (one phase inversion, Heilbronner). Entry 8 (tau = 360) is strongly twisted yet topologically Huckel.\nStep 3 - apply the composed rule entry by entry.\n\n #  n_pi  n_pi mod 4  topology (tau/180)  state  inversions  criterion  verdict\n 1   18      2        Huckel (0)          S0     0           4n+2       DIATROPIC\n 2   20      0        Huckel (0)          S0     0           4n+2       not (paratropic/bond-alternating)\n 3   18      2        Huckel (0)          S0     0           4n+2       DIATROPIC\n 4   12      0        Huckel (0)          T1     1 (Baird)   4n         DIATROPIC\n 5   18      2        Mobius (1)          S0     1 (Mobius)  4n         not\n 6   16      0        Mobius (1)          S0     1 (Mobius)  4n         DIATROPIC\n 7   14      2        Huckel (0)          T1     1 (Baird)   4n         not\n 8   22      2        Huckel (2)          S0     0           4n+2       DIATROPIC\n 9   24      0        Huckel (0)          T1     1 (Baird)   4n         DIATROPIC\n10   18      2        circuit BROKEN      S0     -           -          not (acyclic polyene)\n11   18      2        Mobius (1)          T1     2 (cancel)  4n+2       DIATROPIC\n12   24      0        Mobius (3)          S0     1 (Mobius)  4n         DIATROPIC\n13   14      2        Huckel (0)          S0     0           4n+2       DIATROPIC\n\nDiatropic: entries 1, 3, 4, 6, 8, 9, 11, 12, 13 = 9. Not diatropic: 2, 5, 7, 10 = 4.\n\nANSWER 9.\n\nRobustness note: the question asks only whether the current is DIATROPIC, so the antiaromatic/nonaromatic distinction for entries 2, 5, 7 (large 4n rings may bond-alternate to a nonaromatic ground state rather than remain paratropic) does not change any verdict. Rule provenance for the golden: Huckel (4n+2, closed-shell); Baird, J. Am. Chem. Soc. 1972, 94, 4941-4948 (published 19 July 1972) - 4n aromatic in T1; Heilbronner, Tetrahedron Lett. 1964, 5, 1923-1928 - 4n aromatic for a singly phase-inverted (Mobius) circuit; the full Huckel/Baird/Mobius grid, including the doubly inverted Mobius-triplet 4n+2 entry, is tabulated in M. Sola et al., \"Aromaticity rules\", Nature Chemistry 2022, 14, 585-590 (published 25 May 2022). Even-half-twist (\"Huckel-topology twisted\") macrocycles retaining 4n+2 diatropicity and triply twisted (3 half-twist) Mobius-aromatic macrocycles are both experimentally established motifs in twisted expanded porphyrins.",
     "references": "**Source inspiration:** Cardenas, A.; Jin, Z.; Ni, Y.; Wu, J.; Xia, Y.; Ramirez, F. J.; Casado, J. *Beilstein J. Org. Chem.* **2025**, *21*, 277-285. doi:10.3762/bjoc.21.20 (pub 05 Feb 2025, CC BY 4.0). Physics borrowed only (local vs global ring currents, Huckel bookkeeping failing in both directions); no number, compound or claim reused.",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $9$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Classifies entry 8, with $360^\\circ$ twist, as having Hückel topology.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Excludes entry 10 from macrocyclic ring-current counting because its $\\mathrm{sp}^3$ centre breaks the conjugated circuit.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

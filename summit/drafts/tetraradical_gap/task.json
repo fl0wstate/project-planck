@@ -21,7 +21,26 @@
     "solution": "**Step 1 — Yamaguchi projection, arm pair.** The standard ⟨S²⟩-based projection is $\\Delta E_{\\mathrm{ST}} = 2(E_{\\mathrm{BS}}-E_{\\mathrm{T}})/(\\langle S^2\\rangle_{\\mathrm{T}}-\\langle S^2\\rangle_{\\mathrm{BS}})$. Arm: $2(+7.20)/(2.00-0.00) = +7.20$ kcal/mol — the strong-overlap limit ($\\langle S^2\\rangle_{\\mathrm{BS}}=0$: the BS determinant is already the closed-shell singlet, projection factor 1). Triplet ground pair.\n\n**Step 2 — Yamaguchi projection, bridge pair.** $2(-2.40)/(2.00-1.00) = -4.80$ kcal/mol — the disjoint limit ($\\langle S^2\\rangle_{\\mathrm{BS}}=1$: the BS determinant is a 50/50 singlet-triplet mixture, full factor-2 correction). Singlet ground pair. The two pairs sit in opposite projection regimes; a uniform factor corrupts one of them.\n\n**Step 3 — Map to Heisenberg couplings.** With $\\hat H=\\sum_{\\langle ij\\rangle} J_{ij}\\,\\hat{\\vec S}_i\\cdot\\hat{\\vec S}_j$, an isolated spin-½ pair satisfies $E_S - E_T = -J$. Hence $J_a = -7.20$ kcal/mol (ferromagnetic, bonds 1–2 and 3–4) and $J_b = +4.80$ kcal/mol (antiferromagnetic, bond 2–3). (Any convention gives the same spectrum because the couplings are fixed through the observable pair gaps.)\n\n**Step 4 — $S=2$ sector.** In the recoupled basis $|S_{12},S_{34};S\\rangle$ the unique quintet is $|1,1;2\\rangle$: $E_Q = \\tfrac{J_a}{2}+\\tfrac{J_a}{2}\\cdot 0 \\; \\Rightarrow \\; E_Q = J_a/2 + J_b/4 = -3.60 + 1.20 = -2.40$ kcal/mol (using $\\vec S_1\\cdot\\vec S_2 = \\tfrac14$ in each triplet arm and $\\langle \\vec S_2\\cdot\\vec S_3\\rangle = \\tfrac14$ in the stretched state).\n\n**Step 5 — $S=0$ sector (2×2).** Basis $|1,1;0\\rangle$, $|0,0;0\\rangle$. Diagonal elements: $J_a/2 - J_b/2 = -6.00$ and $-3J_a/2 = +10.80$. Off-diagonal: $(\\sqrt3/4)J_b = 1.2\\sqrt3$ (so $v^2 = 4.32$). Eigenvalues $2.40 \\pm \\sqrt{8.40^2 + 4.32} = 2.40 \\pm \\sqrt{74.88}$; ground singlet $E_0 = 2.40 - \\tfrac{12}{5}\\sqrt{13} = -6.2533$ kcal/mol.\n\n**Step 6 — $S=1$ check.** The three triplet levels lie at $-5.5267, +3.1267, +4.80$ kcal/mol; all above $E_0$. Ground state is the singlet — the AFM bridge wins over rigid ferromagnetic arms precisely because the $|0,0;0\\rangle$ admixture depresses only the singlet.\n\n**Step 7 — Gap.** $E_Q - E_0 = -2.40 - (2.40 - \\sqrt{74.88}) = \\sqrt{74.88} - 4.80 = 2.4(\\sqrt{13}-2) = 3.8533$ kcal/mol.\n\n**Final Answer:** $3.85$ kcal/mol",
     "references": "1. Yamaguchi, K. et al. *Chem. Phys. Lett.* **1988**, 149, 537–542. doi:10.1016/0009-2614(88)80378-6 — ⟨S²⟩-based spin projection. *Required: True.*\n2. Noodleman, L. *J. Chem. Phys.* **1981**, 74, 5737–5743. doi:10.1063/1.440939 — broken-symmetry method. *Required: False.*\n3. Santiago et al. *Chem. Sci.* **2025**, 16, 430–447. doi:10.1039/d4sc05225k (online 21 Nov 2024) — S_ab≈1 projection choice for strongly overlapping diradicals (inspiration). *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $3.85$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Obtains bridge coupling $J_b=+4.80\\,\\mathrm{kcal\\,mol^{-1}}$ under $\\hat H=\\sum J_{ij}\\hat{\\mathbf S}_i\\cdot\\hat{\\mathbf S}_j$, or the equivalent physical coupling under another explicitly stated convention.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains quintet energy $E_Q=-2.40\\,\\mathrm{kcal\\,mol^{-1}}$ with the solution's energy zero.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

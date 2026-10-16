@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -55,11 +55,9 @@
   "source_title": "# planck task — case-volume (planck_task_rotaxane_chirality.md)",
   "legacy_wrong_branches": "- 11 - applies the standard slogan (macrocycle with distinguishable faces = M1, M3, M4; axle with different ends = A2, A3) for six mechanically chiral cases, then unions in the covalently chiral components (all M3, all A4): 6 + 7 - 2 overlap = 11. The single most likely wrong answer.\n- 7 - ignores mechanical chirality altogether and counts only rotaxanes containing an intrinsically chiral component: 4 (M3 row) + 4 (A4 column) - 1 (M3A4) = 7.\n- 13 - as the 11 branch but also treats M4 as fully face-dissymmetric with A1 and counts M2A2 chiral (any unsymmetrical axle assumed sufficient).\n- 10 - correct framework except that M2A2 is called chiral because the axle is unsymmetrical, forgetting that M2's in-plane mirror lines survive threading.\n- 8 - correct framework except that M4A3 is called achiral, forgetting that a stereocentre cannot lie on a mirror plane and therefore destroys the only surviving sigma_v of M4.\n- 6 - counts only the six 'mechanically planar chiral' pairings from the slogan (M1/M3/M4 with A2/A3) and forgets that M3 is itself a chiral macrocycle and A4 a chiral axle.\n- 4 - counts only the M3 row (the one obviously chiral macrocycle), dismissing mechanical chirality entirely and mis-reading A4 as a symmetric axle.\n- 12 - counts every rotaxane whose macrocycle is orientated or face-differentiated (M1, M3, M4 = 12 cases) as chiral, ignoring axle symmetry completely.\n- 16 - concludes that every combination is chiral because each macrocycle either is orientated or has distinguishable faces and every axle has some distinguishing feature.\n- 5 - correct except that M1A2 is judged achiral on the grounds that M1 is itself achiral (C6h) and A2 is achiral, so 'achiral + achiral = achiral', missing emergent mechanical chirality.",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

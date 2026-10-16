@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -145,11 +145,9 @@
   "source_title": "# planck task — rotaxane chirality census v2",
   "legacy_wrong_branches": "| value | route |\n|---|---|\n| **10** | pure component-shortcut: only M5 (chiral ring) and A4 (chiral axle) generate chirality; no emergent mechanical chirality at all |\n| **11** | as above plus the recalled canonical case M1A2 |\n| **14** | component-shortcut with M6 also misread as a chiral macrocycle (S_8 missed) |\n| **14** | correct framework but M5 credited with sigma_v (adjacent strap assumed equivalent to the other two) |\n| **15** | component-shortcut + M6 misread + M1A2 recalled |\n| **17** | correct framework except M2A2 called chiral (unsymmetrical axle assumed sufficient) |\n| **18** | correct framework except M4 called chiral (requires the mirror to *fix* the strapped residues rather than swap them) |\n| **19** | **the two-mirror framework — v1's winning framework — run cleanly on v2**: M6 misread as chiral |\n| **20** | \"any one-face strap makes the ring chiral\": M3 and M4 both misread |\n| **22** | A3 and A5 read as chiral axles (meso relationship between the two ends missed) |\n| **23** | one-face-strap error + M6 error together |\n| **25** | axle symmetry ignored: every ring lacking sigma_v or sigma_h taken to give chiral rotaxanes throughout |\n\nNote **19**: the framework that scored correct on v1 now lands 3 off.",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

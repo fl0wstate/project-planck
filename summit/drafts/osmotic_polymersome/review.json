@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -41,11 +41,9 @@
   "source_title": "# Planck Task — Polymersome Osmotic Deflation (colligative Mn/Mw fork)",
   "legacy_wrong_branches": "| Answer (nm) | Error |\n|---|---|\n| **212** | uses $M_w$ directly (colligative averaging error — the primary fork) |\n| **176** | treats NaCl as $i=1$ (not dissociated) |\n| **187** | both of the above |\n| **54** | uses the 400 mg/mL stock concentration, ignoring dilution into 500 µL |\n| 260 | concludes no net flux (misses that PSar raises external osmolarity) |\n| ~228 | applies the volume ratio to the radius directly (omits the cube root) |\n| 203 (via 202.68) | ignores the 495/500 dilution of NaCl — same rounded answer, harmless |",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

@@ -21,7 +21,26 @@
     "solution": "**Step 1 — Select the usable data.** The couplings must reproduce pair gaps at $\\mathbf{T}$'s single fixed geometry, which matches the pair models' triplet geometries. Result (ii) is an adiabatic gap (each state at its own relaxed geometry) and does not correspond to this fixed geometry: discard. Result (iv) has $|E_{\\mathrm{BS}}-E_{\\mathrm{T}}| = 0.15 < 0.20$ kcal/mol: by the stated convergence rule, $J_{14} = 0$ exactly. Usable: (i) and (iii).\n\n**Step 2 — Projection, arm pair.** $\\Delta E_{\\mathrm{ST}} = 2(E_{\\mathrm{BS}}-E_{\\mathrm{T}})/(\\langle S^2\\rangle_{\\mathrm{T}}-\\langle S^2\\rangle_{\\mathrm{BS}}) = 2(+7.20)/2.00 = +7.20$ kcal/mol. With $\\langle S^2\\rangle_{\\mathrm{BS}}=0$ the BS determinant is the pure singlet: projection factor 1. Triplet ground pair; by symmetry the 3–4 pair is identical.\n\n**Step 3 — Projection, bridge pair.** $2(-2.40)/(2.00-1.00) = -4.80$ kcal/mol. $\\langle S^2\\rangle_{\\mathrm{BS}}=1$: disjoint magnetic orbitals, full factor 2. Singlet ground pair.\n\n**Step 4 — Heisenberg couplings.** With $\\hat H=\\sum J_{ij}\\hat{\\vec S}_i\\cdot\\hat{\\vec S}_j$ and pair relation $E_S-E_T=-J$: $J_a = -7.20$ (bonds 1–2, 3–4), $J_b = +4.80$ (bond 2–3), $J_{14}=0$.\n\n**Step 5 — Quintet energy.** In the fully stretched $S=2$ state every coupled pair is triplet-aligned, $\\langle\\vec S_i\\cdot\\vec S_j\\rangle = 1/4$: $E_Q = 2\\cdot\\tfrac{J_a}{4} + \\tfrac{J_b}{4} = -3.60+1.20 = -2.40$ kcal/mol.\n\n**Step 6 — Singlet sector.** Recoupled basis $|S_{12},S_{34};S\\rangle$: diagonal $\\langle 1,1;0| = J_a/2 - J_b/2 = -6.00$, $\\langle 0,0;0| = -3J_a/2 = +10.80$; off-diagonal $(\\sqrt3/4)J_b = 1.2\\sqrt3$. Eigenvalues $2.40 \\pm \\sqrt{70.56+4.32} = 2.40 \\pm \\sqrt{74.88}$. Ground singlet $E_0 = 2.40 - \\tfrac{12}{5}\\sqrt{13} = -6.2533$ kcal/mol.\n\n**Step 7 — Triplet check.** Lowest $S=1$ level $-5.5267$ kcal/mol, above $E_0$: ground state is the singlet.\n\n**Step 8 — Gap.** $E_Q - E_0 = -2.40 + 6.2533 = 2.4(\\sqrt{13}-2) = 3.8533$.\n\n**Final Answer:** $3.85$ kcal/mol",
     "references": "1. Yamaguchi, K. et al. *Chem. Phys. Lett.* **1988**, 149, 537–542. doi:10.1016/0009-2614(88)80378-6. *Required: True.*\n2. Noodleman, L. *J. Chem. Phys.* **1981**, 74, 5737–5743. doi:10.1063/1.440939. *Required: False.*\n3. Santiago et al. *Chem. Sci.* **2025**, 16, 430–447. doi:10.1039/d4sc05225k (online 21 Nov 2024). *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $3.85$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Rejects result (ii) as an adiabatic gap unsuitable for the specified fixed-geometry couplings.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Sets $J_{14}=0$ because result (iv) is below the stated convergence threshold.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

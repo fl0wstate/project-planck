@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -65,11 +65,9 @@
   "source_title": "# planck task — hidden-gate (planck_task_annulene_quadrant.md)",
   "legacy_wrong_branches": "- 7 - Huckel-only sweep: applies 4n+2 to all thirteen, ignoring both the twist and the spin label (treats tau as mere strain and T1 as irrelevant to electron count), but does notice that the sp3 CH2 in entry 10 breaks the circuit. Diatropic set {1,3,5,7,8,9,13}.\n- 8 - Huckel-only sweep that ALSO misses the sp3 interruption in entry 10 and counts its 18 pi electrons as a closed circuit. Diatropic set {1,3,5,7,8,9,10,13}.\n- 7 - knows Baird, does not invoke Mobius: correctly upgrades entries 4 and 9 and correctly rejects 7, but treats tau as attenuation only, so it loses 6 and 12, wrongly keeps 5, and marks 11 paratropic (18 pi in T1 read as Baird-antiaromatic). Diatropic set {1,3,4,5,8,9,13}.\n- 7 - knows Mobius, does not invoke Baird: correctly handles 5, 6, 12 but treats every T1 entry by the ground-state rule, so it loses 4 and 9, wrongly keeps 7, and marks 11 not diatropic (Mobius 4n+2). Diatropic set {1,3,6,7,8,12,13}.\n- 8 - the single deepest inventory gap: holds three of the four Huckel/Baird/Mobius quadrants but not the doubly inverted one, so entry 11 (Mobius plus triplet, 18 pi) is called paratropic while everything else is right. Only one entry wrong.\n- 8 - parity-blind: equates 'non-planar' with 'Mobius' and so flips entry 8 (tau = 360 deg, two half-twists, 22 pi) from diatropic to paratropic; all other entries correct.\n- 8 - partial parity slip in the other direction: reads tau = 540 deg as 'one and a half turns, effectively an even/closed twist' and demotes entry 12, or symmetrically treats tau = 180 deg as sub-turn 'Huckel-like' and mishandles 5, 6, 11; either slip lands on 8.\n- 5 - twist-kills-delocalisation framework: applies Baird correctly but declares every non-planar macrocycle (5, 6, 8, 11, 12) non-aromatic on overlap grounds, keeping only {1,3,4,9,13}.\n- 6 - spin-kills-ring-current framework: applies Mobius correctly but assumes an open-shell T1 state cannot sustain a clean macrocyclic current, discarding 4, 9 and 11, keeping {1,3,6,8,12,13}.\n- 10 - full rule grid applied correctly but the saturated sp3 CH2 of entry 10 is overlooked (its 18 pi electrons counted as a closed 4n+2 circuit), giving one entry too many.\n- 7 - ring-size-for-pi-count error on the ions: uses 16 pi for [C16H16]2- and treats [C15H15]+ as an odd-electron/nonaromatic case instead of 18 and 14 pi, while otherwise applying the full grid.\n- 11 - inverts Baird into 'any triplet is aromatic' and simultaneously keeps Mobius, so entry 7 is wrongly added and nothing is removed.",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

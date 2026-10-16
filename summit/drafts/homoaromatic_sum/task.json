@@ -20,7 +20,26 @@
     "solution": "Species-by-species tropicity call, then sum the pi-electron count of each diatropic circuit.\n\nA. Nine sp2 CH carbons, monoanion = cyclononatetraenyl anion. Ring circuit: 4 C=C (8 e) + the carbanion lone pair in a p orbital (2 e) = 10 pi = 4n+2 (n=2), planar all-cis, monocyclic => strongly DIATROPIC. Contributes 10.\n\nB. Twelve sp2 carbons, fully conjugated, dianion = [12]annulene dianion. Neutral perimeter carries 12 pi; the two extra electrons give 14 pi = 4n+2 (n=3), planar monocyclic => DIATROPIC (experimentally strongly diatropic: shielded inner, deshielded outer protons). Contributes 14.\n\nC. THE LOAD-BEARING CASE. Eight-membered carbocyclic monocation with one saturated CH2 and seven mutually conjugated sp2 CH carbons = a homotropylium-type ion. Formal analysis: the seven sp2 carbons form a heptatrienyl (cycloheptatrienyl-like) cation fragment carrying 6 pi electrons; the sp3 CH2 interrupts through-bond conjugation, so there is no continuously conjugated cyclic array of p orbitals. The naive conclusion \"not a closed conjugated cycle, and non-planar, therefore no ring current\" is WRONG. Folding the ring at the sp3 carbon lifts the CH2 out of the plane of the heptatrienyl unit and brings its two termini (C1, C7) to ca. 2.0-2.3 A, giving direct through-space (homoconjugative) overlap that CLOSES the circuit: the species is a monohomoaromatic 6 pi-electron system. Archetype: the homotropylium ion (Winstein), whose diatropic ring current is one of the best-quantified in organic chemistry (the two C8 protons differ by ca. 5.8 ppm, the endo proton sitting deep in the shielding cone; NICS is strongly negative). 6 pi = 4n+2 (n=1) in a homoaromatic circuit => DIATROPIC. Contributes 6.\n\nD. Sixteen sp2 carbons, neutral, fully conjugated, essentially planar = [16]annulene. 16 pi = 4n (n=4) => PARATROPIC (observed reversed shift pattern: deshielded inner, shielded outer protons). Contributes 0.\n\nE. Eighteen-membered ring with sp3 CH2 groups at positions 1 and 10 and sixteen sp2 carbons in two equivalent conjugated chains (each an octatetraene segment, 8 pi). The two sp3 centres sit on opposite sides of an essentially PLANAR ring, so the chain termini are held far apart (ca. 2.5 A is impossible here; they are separated by full CH2 units across a wide, flat perimeter) and no through-space closure is available. No cyclic circuit at all => not diatropic. Even if one insisted on a homoconjugative perimeter, the count would be 16 pi = 4n, i.e. still not diatropic. Contributes 0. (This is the honest \"interrupted conjugation\" case, and it is why the shortcut used on C feels validated.)\n\nF. Nine-membered ring, neutral, one ring carbon bearing an exocyclic C=O, the other eight sp2 CH carbons giving 4 C=C. The exocyclic carbonyl pi pair is orthogonal to the ring circuit in the sense that it does not enter the cyclic conjugation path; the ring circuit therefore holds 8 pi = 4n (n=2) => not diatropic (paratropic/non-aromatic). The polar oxyanion resonance form is no rescue: it would place 8 pi over nine centres, still 4n, so it is destabilizing rather than aromatizing (contrast tropone, where the same polarization gives a 6 pi tropylium circuit and IS stabilizing). Contributes 0.\n\nSum over diatropic species: A (10) + B (14) + C (6) = 30.",
     "references": "**Source inspiration:** Cardenas, A.; Jin, Z.; Ni, Y.; Wu, J.; Xia, Y.; Ramirez, F. J.; Casado, J. *Beilstein J. Org. Chem.* **2025**, *21*, 277-285. doi:10.3762/bjoc.21.20 (pub 05 Feb 2025, CC BY 4.0). Physics borrowed only (local vs global ring currents, Huckel bookkeeping failing in both directions); no number, compound or claim reused.",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $30$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Assigns species C a diatropic homoaromatic circuit contributing $6$ electrons.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Assigns species B a diatropic circuit contributing $14$ electrons.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

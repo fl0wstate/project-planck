@@ -20,7 +20,26 @@
     "solution": "1. **Cathode ceiling:** $Q_{cat}(n) = 1.200(1 - 0.0080(n-1))$ mAh cm⁻² (10.0 mg × 120 mAh/g = 1.200 fresh).\n2. **Zinc inventory:** $7.22\\times10^{-3}/65.38 = 1.10431\\times10^{-4}$ mol; ×2F/3.6 → $Z_1 = 5.9194$ mAh cm⁻².\n3. **Corrosion in capacity units:** $17.28\\ \\mu$mol/day × 2F = 3.3345 C/day = 0.92626 mAh/day = **0.038594 mAh per operating hour** (2 e⁻ per H₂ = one Zn).\n4. **Cycle duration — the load-bearing step:** discharge of $Q$ at 1.0 mA takes $Q$ h; the capacity-fixed cathode is full after exactly $Q$ of charge, which at 0.20 mA takes $5Q$ h. Total $6Q$ h. (Prolonging beyond $5Q$ h to restore the zinc reservoir would overcharge the cathode — inadmissible.)\n5. **Per-cycle inventory loss:** orphaning $0.040Q$ + corrosion $0.038594 \\times 6Q = 0.231564Q$ → **$0.271564\\,Q$**.\n6. **Delivered capacity:** $Q_n = \\min\\!\\big(Q_{cat}(n),\\ Z_n/1.078594\\big)$, where $1.078594 = 1 + 0.04 + 0.038594/1.0$ is the inventory a discharge of $Q$ must cover.\n7. **March:** cycles 1–16 cathode-limited (1.200 → 1.056). Zinc entering cycle 17 ≈ 1.018 mAh → cycle 17 is the first zinc-limited one, $Q_{17} = 0.944$ (above spec). Cycle 18: $Q_{18} = 0.706 < 0.85$.\n\n**Final Answer: 18**",
     "references": "1. Tagliaferri et al. *ACS Appl. Mater. Interfaces* **2025**, 17, 38215–38224. doi:10.1021/acsami.5c05599 (ChemRxiv 2024-12-31). *Required: False.*\n2. Parker et al. *Science* **2017**, 356, 415–418. doi:10.1126/science.aak9991 — Zn utilization/reservoir effects. *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $18$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Obtains total operating time $6Q$ hours per cycle when $Q$ is the numerical discharge capacity in $\\mathrm{mAh\\,cm^{-2}}$.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains $Q_{\\mathrm{cat}}(n)=1.200[1-0.0080(n-1)]\\,\\mathrm{mAh\\,cm^{-2}}$.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

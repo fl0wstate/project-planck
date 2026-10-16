@@ -21,7 +21,26 @@
     "solution": "**Step 1 — Conformational gate for participation.** Acetoxy participation requires the acetate oxygen anti-periplanar to the C1–OBs bond, i.e. a trans-diaxial arrangement. On a cyclohexane ring, trans-1,2 substituents can be diaxial (ax,ax chair); cis-1,2 substituents are always ax,eq and can never be diaxial. Therefore the trans-$(1S,2S)$ substrate (70.0%) reacts via the acetoxonium pathway; the cis-$(1R,2S)$ substrate (30.0%) reacts only by direct displacement.\n\n**Step 2 — Acetoxonium formation (trans feed).** The carbonyl oxygen ($^{18}$O) attacks C1 backside, expelling brosylate with inversion at C1. In the resulting 1,3-dioxolan-2-ylium ion, the ring oxygen bonded to C1 is $^{18}$O; the ring oxygen bonded to C2 is $^{16}$O (former ester ether oxygen).\n\n**Step 3 — Ion symmetry.** Ignoring isotopes, the fused acetoxonium ion has a symmetry axis exchanging C1 and C2, so acetic acid captures at C1 and C2 with equal probability (isotopic substitution does not perturb the rates within the stated assumptions).\n\n**Step 4 — Capture at C1 (35.0% of total).** Backside attack at C1 breaks C1–$^{18}$O with a second inversion at C1 → net retention at both centers → $(1S,2S)$ product. The released $^{18}$O becomes the carbonyl oxygen of the acetate on C2. Label = carbonyl position. Not the target species.\n\n**Step 5 — Capture at C2 (35.0% of total).** Backside attack at C2 breaks C2–$^{16}$O with inversion at C2; C1 retains its single inversion from Step 2 → $(1R,2R)$ product. The acetate on C1 keeps C1–$^{18}$O intact as its ether oxygen; the released $^{16}$O becomes its carbonyl. Label = ether position. **Target species.**\n\n**Step 6 — Direct pathway (cis feed, 30.0% of total).** Single inversion at C1 ($1R \\to 1S$) → $(1S,2S)$ trans-diacetate; the C2 acetate untouched, $^{18}$O stays carbonyl. Contributes nothing to the target.\n\n**Step 7 — CIP consistency.** At C1 and C2 the top-priority substituent is always the O-linked group (OBs or OAc), followed by the O-bearing ring carbon, the CH₂ ring carbon, then H — identical priority pattern before and after substitution, so spatial inversion ⇔ descriptor flip throughout.\n\n**Step 8 — Tally.** Target = trans feed × capture-at-C2 fraction = $0.700 \\times 0.500 = 0.350$.\n\n**Final Answer:** $35.0$",
     "references": "1. Winstein, S.; Buckles, R. E. *J. Am. Chem. Soc.* **1942**, 64, 2780–2786. doi:10.1021/ja01260a064 — neighboring acetoxy participation, trans vs cis. *Required: True.*\n2. Clayden, Greeves, Warren, *Organic Chemistry*, 2nd ed., OUP — participation/rearrangement chapter. https://global.oup.com/ukhe/product/organic-chemistry-9780199270293 *Required: False.*\n3. Bloembergen-free — no physics refs needed for this variant.",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $35.0$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Assigns acetoxonium participation to the trans-$(1S,2S)$ feed through its trans-diaxial conformation.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Assigns equal capture probabilities $1/2$ to C1 and C2 of the acetoxonium intermediate.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

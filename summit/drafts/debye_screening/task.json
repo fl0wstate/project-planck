@@ -21,7 +21,26 @@
     "solution": "**Step 1 — Ionic strength.** Na⁺ 0.050 (z²=1), Cl⁻ 0.050+0.030=0.080 (z²=1), Mg²⁺ 0.015 (z²=4). $I = \\tfrac12(0.050 + 0.080 + 0.015\\cdot4) = \\tfrac12(0.190) = 0.095\\ \\mathrm{M} = 95\\ \\mathrm{mol\\,m^{-3}}$.\n\n**Step 2 — Debye length.** $\\kappa^2 = 2 N_A e^2 I/(\\varepsilon_0 \\varepsilon_r k_B T) = 1.0279\\times10^{18}\\ \\mathrm{m^{-2}}$; $\\kappa = 1.01384\\times10^{9}\\ \\mathrm{m^{-1}}$; $\\kappa^{-1} = 0.9863\\ \\mathrm{nm}$.\n\n**Step 3 — Prefactor.** $e^2/(4\\pi\\varepsilon_0\\varepsilon_r) = 2.94269\\times10^{-30}\\ \\mathrm{J\\,m}$ (Bjerrum length 0.715 nm).\n\n**Step 4 — Pairwise (Yukawa $U=\\frac{e^2}{4\\pi\\varepsilon_0\\varepsilon_r}\\frac{e^{-\\kappa r}}{r}$).** r=0.70 nm: $\\kappa r=0.7097$, $U=2.0674\\times10^{-21}$ J (×2). r=1.40 nm: $\\kappa r=1.4194$, $U=5.0838\\times10^{-22}$ J.\n\n**Step 5 — Total.** $2(2.0674\\times10^{-21}) + 5.0838\\times10^{-22} = 4.6433\\times10^{-21}$ J $\\times N_A = 2796.2$ J/mol.\n\n**Final Answer:** $2.80$ kJ/mol.",
     "references": "1. Debye, P.; Hückel, E. *Physikalische Zeitschrift* **1923**, 24, 185–206 — screened potential, Debye length. *Required: False.*\n2. Israelachvili, J. *Intermolecular and Surface Forces*, 3rd ed., Academic Press, 2011 — Yukawa/DLVO electrostatics, ionic strength. https://www.elsevier.com/books/intermolecular-and-surface-forces/israelachvili/978-0-12-375182-9 *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $2.80$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Obtains ionic strength $I=0.095\\,\\mathrm{mol\\,L^{-1}}$.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains Debye length $\\kappa^{-1}\\approx0.9863\\,\\mathrm{nm}$.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

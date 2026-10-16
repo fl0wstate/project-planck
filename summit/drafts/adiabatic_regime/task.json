@@ -21,7 +21,26 @@
     "solution": "1. **K(T):** $\\ln K = \\dfrac{88000 - 240.0\\,T}{8.3145\\,T} = \\dfrac{10583.9}{T} - 28.8653$.\n2. **Adiabatic ramp:** with $x$ = mol C formed in 1.000 L, $T = 298.15 + \\dfrac{88.00x}{1.920} = 298.15 + 45.833x$.\n3. **Boundary:** the flask is open at 1.000 atm, so the liquid cannot exceed $351.44$ K. That temperature is reached at $x = (351.44-298.15)/45.833 = 1.1627$ mol.\n4. **Is the boundary actually crossed?** At $x = 1.1627$: $Q = 1.1627/(0.8373)^2 = 1.659$, while $K(351.44) = 3.4925$. Since $Q < K$ the reaction is not yet at equilibrium when the boiling point is reached, so it must continue.\n5. **Regime change:** beyond that point the released enthalpy goes into latent heat, not sensible heat; $T$ is pinned at $351.44$ K. Equilibrium is therefore set by $K$ at $351.44$ K.\n6. **Solve:** $x/(2.000-x)^2 = 3.49254 \\Rightarrow 3.49254x^2 - 14.97016x + 13.97016 = 0$; discriminant $28.9403$, $\\sqrt{} = 5.37962$; $x = (14.97016-5.37962)/6.98508 = 1.37300$. (Other root > 2, unphysical.)\n7. **Check:** $1.3730/(0.6270)^2 = 3.492$ ✓.\n\n**Final Answer: 1.373**",
     "references": "1. Denbigh, K. *The Principles of Chemical Equilibrium*, 4th ed., CUP, 1981 — van 't Hoff / adiabatic reaction equilibria. *Required: False.*\n2. Smith, Van Ness, Abbott, *Introduction to Chemical Engineering Thermodynamics*, 7th ed., McGraw-Hill, 2005 — adiabatic reactor energy balance, boiling constraint. *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $1.373$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Identifies the equilibrium temperature as the boiling point, $351.44\\,\\mathrm{K}$.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains $K(351.44\\,\\mathrm{K})\\approx3.4925$.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -45,11 +45,9 @@
   "source_title": "# Planck Task — Tetraradical Quintet Gap v2 (red herring + threshold rejection)",
   "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| 3.91 | uses adiabatic +5.60 for the arm coupling |\n| 4.11 | includes J₁₄ = +0.30 despite the threshold rule |\n| 4.17 | both of the above |\n| 3.74 | factor-2 projection applied to both pairs |\n| 1.87 | factor-1 both / no projection |\n| 1.84 | projection regimes swapped |\n| 3.60 | rigid-S=1 arms, or J₁₄ sign error |\n| 14.40 | rigid triplets with bare J_b |\n| 0.73 | reports gap to lowest triplet instead of quintet |",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

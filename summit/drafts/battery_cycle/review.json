@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -39,11 +39,9 @@
   "source_title": "# Planck Task — Zn Reservoir Fade Cycle (hidden-gate, physics-implied)",
   "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| 28 | prolongs charge to restore the Zn reservoir (overcharges the capacity-fixed cathode) — the exact error observed in the live 1/2 run |\n| 38 | symmetric-cycle-time habit: uses $2Q$ h/cycle despite the stated 0.50 mA charge current |\n| 45 | 1 e⁻ per H₂ |\n| 56 | corrosion counted only during discharge |\n| ~4 | CE-compounding from cycle 1, no reservoir plateau |\n| 26/27 | reports plateau end instead of threshold crossing |\n| 30 | off-by-one at crossing |\n\n\n**Domain:** Chemistry · **Subdomain:** Physical (electrochemistry)\n**Answer type:** integer · **Final answer: 40**\n**Source inspiration:** ChemRxiv 2024-5rhzp / ACS AMI 2025, 17, 38215 — Zn-excess design, dead-zinc and HER corrosion losses. Original numbers.\n**Hidden gate (not announced by any rule):** delivered capacity = min(cathode cap, Zn inventory). The oversized Zn reservoir buffers all losses for a 33-cycle plateau before fade begins. The canonical pattern-match — \"4% loss per cycle = CE compounding, $Q_n = Q_0 \\cdot CE^n$\" — gives cycle 5. Further silent forks: 2 e⁻ per H₂ (1 e⁻ → 59); 2-electron Zn inventory basis, 820 mAh/g (1-electron → 19); corrosion runs through BOTH half-cycles (discharge-only → 59-ish).\n**Verification:** independent discrete simulation; answer 40 under ALL THREE defensible intra-cycle orderings (losses-after / corrosion-first / dead-zinc-limits). Q₃₉ = 0.691, Q₄₀ = 0.610 vs threshold 0.65 — fat margins both sides. Proxy solved with a fourth (fully physical) accounting — also 40. Ordering-robust: no ambiguity hazard.\n**Proxy status:** Opus 4.8 solved, no tools, 87 s.",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

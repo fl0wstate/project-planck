@@ -20,7 +20,26 @@
     "solution": "| | $n$ | sequence | achiral? | via | checklist says |\n|---|---|---|---|---|---|\n| E1 | 4 | R S R S | achiral | $S_4$ only ($k=1$) | chiral **(missed)** |\n| E2 | 4 | R R S S | achiral | inversion centre ($k=2$) | achiral |\n| E3 | 4 | R R R S | **chiral** | none | chiral |\n| E4 | 6 | R S R S R S | achiral | inversion centre ($k=3$) | achiral |\n| E5 | 6 | R R S R S S | **chiral** | none | chiral |\n| E6 | 8 | R S R S R S R S | achiral | $S_8$ only ($k=1$) | chiral **(missed)** |\n| E7 | 3 | R R S | **chiral** | none | chiral |\n| E8 | 8 | R R S S R R S S | achiral | rotoreflection ($k=2$) | chiral **(missed)** |\n\n**Chiral: E3, E5, E7. Answer = 3.**\n\nTwo structural facts worth stating in the solution:\n\n- **Odd ring size forces chirality (E7).** If $c_{i+k} = \\bar{c_i}$ for all $i$, applying the shift $n$ times inverts the descriptors an odd number of times while returning every index to itself, giving $c_i = \\bar{c_i}$, which is impossible. So no odd-membered ring of this family is ever achiral, whatever its sequence.\n- **E5 is the control that kills the counting shortcut.** It has three R and three S, equal numbers, yet no shift satisfies the condition, so it is chiral. Any rule of the form \"equal numbers of R and S implies achiral\" fails here.",
     "references": "**Source:** Lam, N. Y. S.; Dhankhar, J.; Lahdenpera, A. S. K.; Phipps, R. J. \"Catalytic Enantioselective Hydrogen Atom Abstraction Enables the Asymmetric Oxidation of Meso Diols.\" *J. Am. Chem. Soc.* **2024**, *146*, 33302-33308. doi:10.1021/jacs.4c13919. Published **26 Nov 2024**, CC BY 4.0, open access and mirrored on PMC. Eight months of cutoff margin.",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $3$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Classifies E1 as achiral through an $S_4$ operation.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Classifies E5 as chiral because no cyclic shift maps every descriptor to its opposite.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

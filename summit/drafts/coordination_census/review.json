@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -73,11 +73,9 @@
   "source_title": "# planck task — mixed-geometry coordination isomer census — ***RETIRED: 0/2***",
   "legacy_wrong_branches": "Three independent error modes, computed in every combination:\n\n| bite constraint ignored | terpy read as flexible | chirality layer skipped | per-entry | total |\n|---|---|---|---|---|\n| — | — | — | 2, 2, 12, 2, 3, 1 | **22 (truth)** |\n| — | — | ✓ | 2, 1, 6, 2, 2, 1 | 14 |\n| — | ✓ | — | 2, 2, 12, 2, 3, 4 | 25 |\n| — | ✓ | ✓ | 2, 1, 6, 2, 2, 3 | 16 |\n| ✓ | — | — | 2, 2, 15, 3, 5, 2 | 29 |\n| ✓ | — | ✓ | 2, 1, 9, 3, 4, 2 | 21 |\n| ✓ | ✓ | — | 2, 2, 15, 3, 5, 5 | 32 |\n| ✓ | ✓ | ✓ | 2, 1, 9, 3, 4, 4 | 23 |\n\n**All eight totals are distinct and only the correct combination gives 22.** The error modes interact non-additively — ignoring the bite constraint changes how many isomers there are *to* merge when the chirality layer is skipped — so the combinations were computed in full rather than by summing deltas.\n\nNote the two catches were tuned against each other. Terpyridine paired with glycinate would have given a $+6$ branch, colliding exactly with the $-6$ from skipping the chirality layer on H3; oxalate gives $+3$ instead, which no combination of the other errors reaches.",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -41,11 +41,9 @@
   "source_title": "# Planck Task — Tetraradical Quintet Gap (from stump-from-paper workflow)",
   "legacy_wrong_branches": "| Answer | Error |\n|---|---|\n| 3.74 | factor-2 projection applied to BOTH pairs (the frontier-model default) |\n| 1.87 | factor-1 applied to both / no projection at all |\n| 1.84 | regimes swapped (arm ×2, bridge ×1) |\n| 3.60 | rigid-S=1 arms + correct projection factor — the additivity trap |\n| 14.40 | rigid triplets with bare J_b (missing ¼ spin-projection factor) |\n| 7.71 | Heisenberg convention slip (−2J form), doubles spectrum |\n| 0.73 | reports gap to lowest S=1 level instead of quintet |\n| ≤0 | sign error on bridge ΔE_ST, predicts quintet ground state |",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

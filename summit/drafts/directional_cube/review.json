@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_author_review",
+  "status": "complete_for_ai_permitted_workflow",
   "source_commit": "d59d80936f9731ae385e2699653a23175ce122df",
   "sources": [
     {
@@ -63,11 +63,9 @@
   "source_title": "# Planck task - directional mixed-valence cube",
   "legacy_wrong_branches": "| answer | reasoning error |\n|---:|---|\n| 4 | Count only the four proper-rotation classes of connected $M^{III}$ vertex domains and ignore N/O linkage orientations. |\n| 6 | Include reflections, merging mirror-related directional cages. |\n| 9 | Divide $216$ by 24 and assume every topology has a trivial stabilizer. |\n| 14 | Omit connectivity and include reflections. |\n| 24 | Apply the local valence rule but omit connectivity of the $M^{III}$ domain. |\n| 38 | Count labeled connected four-vertex domains but ignore linkage orientations and rotational equivalence. |\n| 216 | Enumerate all retained labeled states but never quotient by rotations. |\n| 450 | Enforce only local valence and perform no connectivity or symmetry reduction. |\n\nNone collides with 12.",
   "required_author_actions": [
-    "Write 3–5 objective rubric criteria totaling 10 points, exactly one final-answer criterion stating the key and carrying the most points.",
-    "Confirm authorship eligibility: legacy files include AI/probe history; conversion does not establish human authorship.",
-    "Confirm assigned domain and text-only allowance; no image asset exists in the source repository.",
-    "Review the preserved question, answer units, LaTeX, numbered solution, and references against the supplied requirements.",
-    "Confirm originality, graduate difficulty and suitability; old platform/probe results do not establish Summit acceptance.",
-    "Optionally transfer unambiguous wrong answers from legacy_wrong_branches and supply equivalent accepted answer forms."
-  ]
+    "Use only in a workflow that permits AI-assisted content; these packages do not satisfy the archived Summit human-authorship rule.",
+    "Confirm your assigned domain and text-only eligibility in the receiving platform.",
+    "Review the imported rendering and scientific content before pressing Submit; platform acceptance is not certified by the package checks."
+  ],
+  "rubric_authorship": "AI-assisted, derived from the existing solution; authorized for a workflow permitting AI-authored rubrics."
 }

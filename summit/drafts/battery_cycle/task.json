@@ -20,7 +20,26 @@
     "solution": "**Step 1 — Cathode ceiling.** $10.0\\ \\mathrm{mg} \\times 120\\ \\mathrm{mAh/g} = 1.200\\ \\mathrm{mAh\\,cm^{-2}}$ per discharge, every cycle.\n\n**Step 2 — Zinc inventory.** $7.22\\times10^{-3}/65.38 = 1.1043\\times10^{-4}$ mol; 2 e⁻ per Zn: $Z_0 = 2(1.1043\\times10^{-4})(96485)/3.6 = 5.9194\\ \\mathrm{mAh\\,cm^{-2}}$.\n\n**Step 3 — Corrosion rate in capacity units.** Each H₂ = 2 e⁻ = one Zn: $17.28\\ \\mu\\mathrm{mol/day} \\times 2F = 3.3345\\ \\mathrm{C/day} = 0.92626\\ \\mathrm{mAh\\,day^{-1}\\,cm^{-2}}$, i.e. $0.038594\\ \\mathrm{mAh}$ per operating hour.\n\n**Step 4 — Cycle duration (the load-bearing step).** Discharge $Q$ at 1.0 mA → $Q$ h. Recharge: the capacity-fixed cathode is full after exactly $Q$ of charge; at 0.50 mA that takes $2Q$ h. Total operating time $= 3Q$ h per cycle. (Prolonging the charge beyond $2Q$ h to \"restore the zinc reservoir\" would overcharge the cathode, which the prompt fixes at 120 mAh/g reversible — inadmissible.)\n\n**Step 5 — Per-cycle inventory loss.** Dead zinc $0.04Q$ + corrosion $0.038594 \\times 3Q = 0.115782Q$; total $0.155782\\,Q$.\n\n**Step 6 — Plateau phase.** While Zn suffices, $Q = 1.200$: loss $= 0.186938$ mAh/cycle. $Z_n = 5.9194 - (n-1)(0.186938)$; the reservoir buffers ~26 full cycles (capacity fade is zero throughout the plateau).\n\n**Step 7 — Fade phase.** Once zinc-limited, capacity decays geometrically at ratio $\\approx 0.844$ per cycle (exact ratio depends on the intra-cycle convention; the crossing does not).\n\n**Step 8 — Crossing.** Under every defensible convention the sequence passes 1.06 → 0.89 → 0.75 (±0.03 by convention): cycle 28 delivers $\\ge 0.85$, cycle 29 delivers $\\le 0.755 < 0.80$. First cycle below 0.80 = 29 in all cases.\n\n**Final Answer:** $29$",
     "references": "1. Tagliaferri et al. ACS Appl. Mater. Interfaces 2025, 17, 38215–38224. doi:10.1021/acsami.5c05599 (ChemRxiv 2024-12-31) — Zn-excess microbattery, dead-Zn and HER losses. *Required: False.*\n2. Parker et al. Science 2017, 356, 415–418. doi:10.1126/science.aak9991 — Zn utilization and reservoir effects in rechargeable Zn cells. *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $29$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Obtains total operating time $3Q$ hours per cycle when $Q$ is the numerical discharge capacity in $\\mathrm{mAh\\,cm^{-2}}$.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains initial zinc capacity $Z_0\\approx5.9194\\,\\mathrm{mAh\\,cm^{-2}}$.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

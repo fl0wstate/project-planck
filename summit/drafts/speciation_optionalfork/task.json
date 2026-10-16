@@ -21,7 +21,26 @@
     "solution": "1. **Nernst invariant:** $\\ln(x/y)=(0.7600-0.7700)/(RT/F)$, $RT/F=0.0256928$ V → $x/y=0.677587$.\n2. **Side-reaction coefficients:** $x=C_{III}/\\alpha_{III}$, $y=C_{II}/\\alpha_{II}$ where $\\alpha_{III}=1+10^3\\ell+10^8\\ell^2+10^9 h\\ell+5\\times10^{-6}/h$ (the $10^9 h\\ell$ term IS M(HL), since $[HL^-]=10^7 h\\ell$) and $\\alpha_{II}=1+3\\times10^5\\ell+5\\times10^8\\ell^2$. Target: $\\alpha_{II}/\\alpha_{III}=3(0.677587)=2.03276$.\n3. **Ligand balance** closes $\\ell$ at each pH: $L_T=\\ell(1+10^7 h+10^{11}h^2)+x\\ell(10^3+2\\times10^8\\ell+10^9 h)+y\\ell(3\\times10^5+10^9\\ell)$.\n4. **Curve shape:** $\\alpha_{II}/\\alpha_{III}$ rises from ~1, peaks ~pH 6, collapses at high pH (hydrolysis $5\\times10^{-6}/h$ inflates $\\alpha_{III}$) → crosses target **twice**.\n5. **Roots:** rising side pH 4.349; falling side pH 8.218. **Sum = 12.567.**",
     "references": "1. Ringbom, A. *Complexation in Analytical Chemistry*, Wiley, 1963 — side-reaction (alpha) coefficients, conditional constants. *Required: False.*\n2. Martell & Motekaitis, *Determination and Use of Stability Constants*, VCH, 1992 — protonated-complex speciation. *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $12.567$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Obtains the Nernst free-ion ratio $x/y\\approx0.677587$.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Includes $10^9h\\ell$ in $\\alpha_{III}$ to account for the protonated ligand complex.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }

@@ -20,7 +20,26 @@
     "solution": "**Step 1 — Wall stress.** Force balance on the nozzle land: $\\tau_w = PR/(2L) = 6.25\\,P$ (τ_w in Pa, P in kPa). Per pressure: 32→200, 40→250, 48→300, 56→350, 64→400 Pa.\n\n**Step 2 — T1 criterion.** Bingham flow exists only if $\\tau_y < \\tau_w$. The unyielded plug has radius $r_p = R\\,\\tau_y/\\tau_w$; plug area fraction $= (\\tau_y/\\tau_w)^2 \\ge 1/2 \\Leftrightarrow \\tau_y/\\tau_w \\ge 1/\\sqrt2 = 0.7071$. So T1 ⇔ $0.7071 \\le \\tau_y/\\tau_w < 1$.\n\n**Step 3 — T1 sweep (ratios).** A 0.750✓ B 0.800✓ C 0.840✓ D 0.880✓ E 0.900✓ F 0.920✓ G 0.950✓ H 0.780✓ I 0.550✗ J 0.600✗ K 0.650✗ L 0.680✗ (area 0.462 < ½) M 0.400✗ N 0.450✗ O 1.100✗ (no flow) P 1.250✗ (no flow). Survivors: A–H.\n\n**Step 4 — T2 conversions.** $t = 1.8\\times10^6$ s. Current-type: $\\Delta m = i\\,t\\,M_{\\mathrm{Zn}}/(2F) = 0.6099\\,i$ mg cm⁻² (n = 2). Flux-type: each H₂ takes 2 e⁻ = one Zn, so $\\Delta m = v \\times 10^{-9} \\times 1.8\\times10^6 \\times 65.38\\times10^3 = 117.7\\,v$ mg cm⁻².\n\n**Step 5 — T2 sweep (loss vs 0.1 m).** A 1.83≤3.0✓ B 1.18≤2.0✓ C 4.88>2.5✗ D 5.88>3.5✗ E 1.22≤1.5✓ F 2.35≤4.0✓ G 3.96>2.8✗ H 1.41≤1.8✓.\n\n**Step 6 — Count.** Viable: A, B, E, F, H.\n\n**Final Answer:** $5$",
     "references": "1. Tagliaferri et al. ACS Appl. Mater. Interfaces 2025, 17, 38215–38224. doi:10.1021/acsami.5c05599 (ChemRxiv 2024-12-31) — printed Zn ink rheology, corrosion quantification. *Required: False.*\n2. Bird, R. B.; Dai, G. C.; Yarusso, B. J. Rev. Chem. Eng. 1983, 1, 1–70 — Bingham plug flow. *Required: False.*",
     "rubric": {
-      "criteria": [],
+      "criteria": [
+        {
+          "id": "c1",
+          "description": "Gives $5$ as the final answer in the units and precision requested by the question.",
+          "points": 5,
+          "isFinalAnswer": true
+        },
+        {
+          "id": "c2",
+          "description": "Derives the flow-and-plug criterion $1/\\sqrt{2}\\leq\\tau_y/\\tau_w<1$.",
+          "points": 3,
+          "isFinalAnswer": false
+        },
+        {
+          "id": "c3",
+          "description": "Obtains the corrosion conversion $\\Delta m\\approx117.7v\\,\\mathrm{mg\\,cm^{-2}}$ for the numerical hydrogen flux $v$ in the question's units.",
+          "points": 2,
+          "isFinalAnswer": false
+        }
+      ],
       "commonWrongAnswers": []
     }
   }
