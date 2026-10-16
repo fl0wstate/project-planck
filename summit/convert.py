@@ -231,6 +231,29 @@ def package_drafts(destination):
             info = zipfile.ZipInfo("task.json", date_time=(2026, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             archive.writestr(info, (destination / record["task"]).read_bytes())
+    with zipfile.ZipFile(destination / "all-question-imports.zip", "w",
+                         compression=zipfile.ZIP_DEFLATED) as bundle:
+        entries = {
+            "README.txt": (
+                "Summit question import packages\n\n"
+                "Extract this bundle, then import one question ZIP at a time.\n"
+                "Each question ZIP contains task.json at its root, including the question, "
+                "answer key and solution.\n\n"
+                "These are import drafts, not submission-ready tasks. All 26 source tasks "
+                "currently lack the required author-written rubric. Complete 3–5 objective "
+                "criteria totaling 10 points, with exactly one final-answer criterion.\n"
+                "Review the task's review.json in the repository for remaining author actions. "
+                "Confirm text-only eligibility, authorship, references, and formatting before "
+                "submitting. No images are included because none exist in the source data.\n"
+            ).encode(),
+        }
+        entries.update({f"{record['id']}.zip":
+                        (archive_folder / f"{record['id']}.zip").read_bytes()
+                        for record in manifest["tasks"]})
+        for name, content in entries.items():
+            info = zipfile.ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            bundle.writestr(info, content)
     print(f"Created {len(manifest['tasks'])} import-only draft ZIPs; author completion required.")
 
 
